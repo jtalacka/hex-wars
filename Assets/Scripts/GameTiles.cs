@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class GameTiles : MonoBehaviour
 {
     public static GameTiles instance;
-    public Tilemap Tilemap;
+    public List<Tilemap> tilemap;
 
     public Dictionary<Vector3, WorldTile> tiles;
 
@@ -28,6 +28,7 @@ public class GameTiles : MonoBehaviour
     private void GetWorldTiles()
     {
         tiles = new Dictionary<Vector3, WorldTile>();
+        foreach(var Tilemap in tilemap)
         foreach (Vector3Int pos in Tilemap.cellBounds.allPositionsWithin)
         {
             var localPlace = new Vector3Int(pos.x, pos.y, pos.z);
@@ -45,5 +46,6 @@ public class GameTiles : MonoBehaviour
         //    print(tile.LocalPlace);
             tiles.Add(tile.LocalPlace, tile);
         }
+
     }
 }

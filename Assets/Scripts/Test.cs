@@ -7,18 +7,22 @@ public class Test : MonoBehaviour
 {
     private WorldTile _tile;
     public float speed;
-    public float length;
-    public GameObject Army;
-    private bool initPressed;
+    public Army army;
+    public bool objectPressed = false;
     private bool moving = false;
-    private bool objectPressed = false;
     private List<WorldTile> tile = new List<WorldTile>();
-    Vector3 lastMouseCoordinate = Vector3.zero;
+    private Vector3 lastMouseCoordinate = Vector3.zero;
     // Update is called once per frame
-    Tilemap tilemap;
+    List<Tilemap> tilemap;
     private void Start()
     {
-        tilemap = GameTiles.instance.Tilemap;
+        army = Object.Instantiate(army);
+        tilemap = new List<Tilemap>();
+        foreach(int i in army.TileMaps)
+        {
+            tilemap.Add(GameTiles.instance.tilemap[i]);
+        }
+       // tilemap = army.tilemap[0];
 
     }
     private void Update()
@@ -33,15 +37,15 @@ public class Test : MonoBehaviour
             }
 
 
-            if (initPressed)
+            if (objectPressed)
             {
                 Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                var current = this.tilemap.WorldToCell(point);
-                if (current.x != lastMouseCoordinate.x || current.y != lastMouseCoordinate.y)
+                var current = this.tilemap[0].WorldToCell(point);
+                if (current != lastMouseCoordinate)
                 {
                     lastMouseCoordinate = current;
                     var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
-                    var tilemap = GameTiles.instance.Tilemap;
+                    var tilemap = GameTiles.instance.tilemap[0];
                     current = current - tile[tile.Count - 1].LocalPlace;
                     if (current.x != 0)
                         current.x = current.x / Mathf.Abs(current.x);
@@ -55,7 +59,7 @@ public class Test : MonoBehaviour
                         {
                             if (!tile.Contains(_tile))
                             {
-                                if (tile.Count < length)
+                                if (tile.Count < army.movementLeft+1)
                                 {
                                     _tile.TilemapMember.SetTileFlags(_tile.LocalPlace, TileFlags.None);
                                     Color color = Color.green;
@@ -66,13 +70,13 @@ public class Test : MonoBehaviour
                                 }
                             }
                         }
-                        print(_tile);
+                        //print(_tile);
                         if (tiles.TryGetValue(lastMouseCoordinate, out _tile))
                         {
                             if (tile.Contains(_tile))
                             {
                                 int index = tile.FindIndex(t => t == _tile);
-                                resetColorFromSelected(index + 1);
+                                resetColorFromSelected(index + 1, tile.Count - 1);
                             }
                         }
                     }
@@ -86,7 +90,7 @@ public class Test : MonoBehaviour
             {
                 if (Vector2.Distance(transform.position, tile[0].WorldLocation) > 0.001f)
                 {
-                    print(transform.position + "----------"+tile[0].WorldLocation);
+                  //  print(transform.position + "----------"+tile[0].WorldLocation);
                     var temVector = tile[0].WorldLocation;
                     transform.position = Vector2.MoveTowards(transform.position, temVector, step);
 
@@ -95,13 +99,14 @@ public class Test : MonoBehaviour
                 {
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
                     tile.RemoveAt(0);
+                    army.movementLeft -= 1;
                 }
             }
             else
             {
                 moving = false;
                 objectPressed = false;
-                initPressed = false;
+                objectPressed = false;
             }
         }
     }
@@ -112,13 +117,13 @@ public class Test : MonoBehaviour
             print("testMOve");
             var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
             Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            var worldPoint = tilemap.WorldToCell(point);
+            var worldPoint = tilemap[0].WorldToCell(point);
             if (tiles.TryGetValue(worldPoint, out _tile))
             {
                 if (tile.Contains(_tile))
                 {
                     int index = tile.FindIndex(t => t == _tile);
-                    resetColorFromSelected(index + 1);
+                    resetColorFromSelected(index + 1, tile.Count - 1);
                     moving = true;
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
                     tile.RemoveAt(0);
@@ -132,18 +137,17 @@ public class Test : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Input.ResetInputAxes();
-            if (!objectPressed)
+            if (!moving)
             {
-                print("testmouse");
-
-                if (initPressed == false)
+                if (!objectPressed)
                 {
-                    initPressed = true;
+                    print("testmouse");
+
+                    objectPressed = true;
                     var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
-                    clearColor();
                     Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    lastMouseCoordinate = tilemap.WorldToCell(point);
-                    var worldPoint = tilemap.WorldToCell(point);
+                    lastMouseCoordinate = tilemap[0].WorldToCell(point);
+                    var worldPoint = tilemap[0].WorldToCell(point);
 
                     if (tiles.TryGetValue(worldPoint, out _tile))
                     {
@@ -155,41 +159,25 @@ public class Test : MonoBehaviour
                         _tile.TilemapMember.SetColor(_tile.LocalPlace, color);
                         tile.Add(_tile);
                     }
+
+                    objectPressed = true;
                 }
-                else if (initPressed)
+                else
                 {
-                    var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
-
-                    Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    lastMouseCoordinate = tilemap.WorldToCell(point);
-                    var worldPoint = tilemap.WorldToCell(point);
-
+                    resetColorFromSelected(0, tile.Count - 1);
+                    objectPressed = false;
+                    objectPressed = false;
                 }
-                objectPressed = true;
-            }
-            else
-            {
-                resetColorFromSelected(0);
-                objectPressed = false;
-                initPressed = false;
             }
         }
 
     }
-    private void resetColorFromSelected(int index)
+    private void resetColorFromSelected(int begining,int end)
     {
-        int length = tile.Count - 1;
-        for (int i = length; i >= index; i--)
+        for (int i = end; i >= begining; i--)
         {
             tile[i].TilemapMember.SetColor(tile[i].LocalPlace, new Color(1, 1, 1, 1));
             tile.RemoveAt(i);
         }
-    }
-    private void clearColor()
-    {
-        tile.ForEach((tile)=>{
-            tile.TilemapMember.SetColor(tile.LocalPlace, new Color(1, 1, 1, 1));
-        });
-        tile.Clear();
     }
 }

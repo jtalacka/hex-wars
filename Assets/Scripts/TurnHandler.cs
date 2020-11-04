@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class TurnHandler : MonoBehaviour
 {
     public Text supplyText;
-    public static Player currentPlayer;
-    private List<Player> players = new List<Player>();
     private int currentPlayerIndex = -1;
     
     // Start is called before the first frame update
@@ -16,7 +14,7 @@ public class TurnHandler : MonoBehaviour
         GoToNextPlayer();
         CalculateIncome();
         CalculateSupply();
-        supplyText.text = "Supply: " + currentPlayer.supply + "/turn";
+        supplyText.text = "Supply: " + Players.currentPlayer.supply + "/turn";
     }
 
     public void EndTurn()
@@ -30,7 +28,7 @@ public class TurnHandler : MonoBehaviour
 
     private void RestoreArmyMovement()
     {
-        foreach (Army army in currentPlayer.armies)
+        foreach (Army army in Players.currentPlayer.armies)
         {
             army.movementLeft = army.movement;
         }
@@ -38,16 +36,16 @@ public class TurnHandler : MonoBehaviour
 
     private void GoToNextPlayer()
     {
-        if (players.Count - 1 > currentPlayerIndex)
+        if (Players.players.Count - 1 > currentPlayerIndex)
         {
             currentPlayerIndex++;
-            currentPlayer = players[currentPlayerIndex];
+            Players.currentPlayer = Players.players[currentPlayerIndex];
             
         }
-        else if (players.Count > 0)
+        else if (Players.players.Count > 0)
         {
             currentPlayerIndex = 0;
-            currentPlayer = players[currentPlayerIndex];
+            Players.currentPlayer = Players.players[currentPlayerIndex];
         }
         Debug.Log(currentPlayerIndex);
     }
@@ -60,12 +58,12 @@ public class TurnHandler : MonoBehaviour
     private void CalculateSupply()
     {
         int supply = 0;
-        foreach (Army army in currentPlayer.armies)
+        foreach (Army army in Players.currentPlayer.armies)
         {
             supply += army.supply;
         }
-        currentPlayer.supply = -supply;
-        currentPlayer.money += supply;
+        Players.currentPlayer.supply = -supply;
+        Players.currentPlayer.money += supply;
     }
 
 

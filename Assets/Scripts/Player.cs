@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu]
-public class Player : ScriptableObject
+public class Player : MonoBehaviour
 {
     public int id;
-    public List<Army> armies;
-    public int money_amount;
+    public List<Army> armies = new List<Army>();
+    public int supply;
+    public int money;
     public int province_nr;
 }

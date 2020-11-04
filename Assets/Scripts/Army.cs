@@ -12,6 +12,7 @@ public class Army : ScriptableObject
     public int movement;
     public int movementLeft;
     public int quantity;
+    public int supply;
     public Sprite icon;
 
 }

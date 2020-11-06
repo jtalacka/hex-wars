@@ -18,13 +18,20 @@ public class Test : MonoBehaviour
     {
         army = Object.Instantiate(army);
         tilemap = new List<Tilemap>();
-        foreach(int i in army.TileMaps)
+        var map = GameTiles.instance.tilemap[0];
+        var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
+        foreach (int i in army.TileMaps)
         {
             tilemap.Add(GameTiles.instance.tilemap[i]);
         }
-       // tilemap = army.tilemap[0];
 
-    }
+        if (tiles.TryGetValue(transform.position, out _tile))
+        {
+            _tile.army = army;
+        }
+            // tilemap = army.tilemap[0];
+
+        }
     private void Update()
     {
         if (!moving)
@@ -40,7 +47,7 @@ public class Test : MonoBehaviour
             if (objectPressed)
             {
                 Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                var current = this.tilemap[0].WorldToCell(point);
+                var current = locationInGrid(point);
                 if (current != lastMouseCoordinate)
                 {
                     lastMouseCoordinate = current;
@@ -63,6 +70,10 @@ public class Test : MonoBehaviour
                                 {
                                     _tile.TilemapMember.SetTileFlags(_tile.LocalPlace, TileFlags.None);
                                     Color color = Color.green;
+                                    if (enemyNearby(current))
+                                    {
+                                        color = Color.red;
+                                    }
                                     color.a = 0.5f;
                                     print(_tile.TilemapMember.color);
                                     _tile.TilemapMember.SetColor(_tile.LocalPlace, color);
@@ -93,11 +104,14 @@ public class Test : MonoBehaviour
                   //  print(transform.position + "----------"+tile[0].WorldLocation);
                     var temVector = tile[0].WorldLocation;
                     transform.position = Vector2.MoveTowards(transform.position, temVector, step);
+                    tile[0].army = army;
+
 
                 }
                 else
                 {
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
+                    tile[0].army = null;
                     tile.RemoveAt(0);
                     army.movementLeft -= 1;
                 }
@@ -117,7 +131,7 @@ public class Test : MonoBehaviour
             print("testMOve");
             var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
             Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            var worldPoint = tilemap[0].WorldToCell(point);
+            var worldPoint =locationInGrid(point);
             if (tiles.TryGetValue(worldPoint, out _tile))
             {
                 if (tile.Contains(_tile))
@@ -146,8 +160,8 @@ public class Test : MonoBehaviour
                     objectPressed = true;
                     var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
                     Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    lastMouseCoordinate = tilemap[0].WorldToCell(point);
-                    var worldPoint = tilemap[0].WorldToCell(point);
+                    lastMouseCoordinate = locationInGrid(point);
+                    var worldPoint = locationInGrid(point);
 
                     if (tiles.TryGetValue(worldPoint, out _tile))
                     {
@@ -180,4 +194,27 @@ public class Test : MonoBehaviour
             tile.RemoveAt(i);
         }
     }
+
+    private Vector3Int locationInGrid(Vector3 position)
+    {
+        return tilemap[0].WorldToCell(position);
+    }
+    private bool enemyNearby(Vector3Int currentPosition)
+    {
+        bool nearby = false;
+        var tiles = GameTiles.instance.tiles;
+        DirectionCalculator.instance.getSurroundingCoordinates(currentPosition).ForEach((coordinate) =>
+        {
+            if (tiles.TryGetValue(coordinate, out _tile))
+            {
+                if (_tile.army != null)
+                {
+                    nearby = true;
+                }
+            }
+        }
+        );
+        return nearby;
+    }
+
 }

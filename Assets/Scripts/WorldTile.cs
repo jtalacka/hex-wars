@@ -9,6 +9,8 @@ public class WorldTile
 
     public Vector3 WorldLocation { get; set; }
 
+    public Army army;
+
     public TileBase TileBase { get; set; }
 
     public Tilemap TilemapMember { get; set; }

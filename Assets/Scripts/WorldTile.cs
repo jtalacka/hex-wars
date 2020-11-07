@@ -9,7 +9,7 @@ public class WorldTile
 
     public Vector3 WorldLocation { get; set; }
 
-    public Army army;
+    public Army army { get; set; }
 
     public TileBase TileBase { get; set; }
 

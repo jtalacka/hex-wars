@@ -10,6 +10,7 @@ public class Test : MonoBehaviour
     public Army army;
     public bool objectPressed = false;
     private bool moving = false;
+    private bool enemy = false;
     private List<WorldTile> tile = new List<WorldTile>();
     private Vector3 lastMouseCoordinate = Vector3.zero;
     private WorldTile tempTile;
@@ -70,10 +71,15 @@ public class Test : MonoBehaviour
                         {
                             if (!tile.Contains(_tile))
                             {
-                                if (tile.Count < army.movementLeft + 1 && !enemyNearby(current))
+                                if (tile.Count < army.movementLeft + 1 && !enemy)
                                 {
                                     _tile.TilemapMember.SetTileFlags(_tile.LocalPlace, TileFlags.None);
                                     Color color = Color.green;
+                                    if (enemyNearby(current))
+                                    {
+                                        color = Color.red;
+                                        enemy = true;
+                                    }
 
                                     color.a = 0.5f;
                                     //  print(_tile.TilemapMember.color);
@@ -88,6 +94,10 @@ public class Test : MonoBehaviour
                             if (tile.Contains(_tile))
                             {
                                 int index = tile.FindIndex(t => t == _tile);
+                                if (index != tile.Count - 1)
+                                {
+                                    enemy = false;
+                                }
                                 resetColorFromSelected(index + 1, tile.Count - 1);
                             }
                         }

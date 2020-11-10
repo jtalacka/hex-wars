@@ -11,10 +11,10 @@ public class TurnHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GoToNextPlayer();
+        /*GoToNextPlayer();
         CalculateIncome();
         CalculateSupply();
-        supplyText.text = "Supply: " + Players.currentPlayer.supply + "/turn";
+        supplyText.text = "Supply: " + Players.currentPlayer.supply + "/turn";*/
     }
 
     public void EndTurn()

@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: Infantry
   TileMaps: 00000000
+  positionInGrid: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
   movement: 50
   movementLeft: 50
-  quantity: 0
+  quantity: 50
   supply: 0
+  price: 0
   icon: {fileID: 0}

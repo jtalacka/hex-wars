@@ -65,7 +65,6 @@ public class Test : MonoBehaviour
                         current.y = current.y / Mathf.Abs(current.y);
 
                     current += tile[tile.Count - 1].LocalPlace;
-
                     if (tiles.TryGetValue(current, out _tile))
                     {
                         if (Vector3.Distance(tile[tile.Count - 1].WorldLocation, _tile.WorldLocation) < 1f)
@@ -229,6 +228,7 @@ public class Test : MonoBehaviour
 
     private bool enemyNearby(Vector3 currentPosition)
     {
+
         bool nearby = false;
         var tiles = GameTiles.instance.tiles;
         WorldTile _tile;

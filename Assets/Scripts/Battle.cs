@@ -89,7 +89,6 @@ public class Battle : MonoBehaviour
                     break;
                 }
             }
-            print(trans.transform.position);
 
             if (Vector2.Distance(trans.transform.position, retreatTile.WorldLocation) >= 0.001f)
             {

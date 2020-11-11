@@ -19,24 +19,20 @@ public class Test : MonoBehaviour
     List<Tilemap> tilemap;
     private void Start()
     {
-        army = Object.Instantiate(army);
         tilemap = new List<Tilemap>();
         var map = GameTiles.instance.tilemap[0];
         var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
-        foreach (int i in army.TileMaps)
-        {
-            tilemap.Add(GameTiles.instance.tilemap[i]);
-        }
+        tilemap.Add(map);
+
 
         if (tiles.TryGetValue(locationInGrid(transform.position), out _tile))
         {
-            _tile.army = army;
+            army = _tile.army;
             army.positionInGrid = _tile.LocalPlace;
         }
-       // print(locationInGrid(transform.position));
-            // tilemap = army.tilemap[0];
-
-        }
+        print(army.positionInGrid);
+        // tilemap = army.tilemap[0];
+    }
     private void Update()
     {
         if (!moving)
@@ -65,6 +61,7 @@ public class Test : MonoBehaviour
                         current.y = current.y / Mathf.Abs(current.y);
 
                     current += tile[tile.Count - 1].LocalPlace;
+
                     if (tiles.TryGetValue(current, out _tile))
                     {
                         if (Vector3.Distance(tile[tile.Count - 1].WorldLocation, _tile.WorldLocation) < 1f)
@@ -173,8 +170,9 @@ public class Test : MonoBehaviour
     }
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)&&army.player.id==Players.currentPlayer.id)
         {
+            print(army.player.id);
             Input.ResetInputAxes();
             if (!moving)
             {
@@ -228,7 +226,6 @@ public class Test : MonoBehaviour
 
     private bool enemyNearby(Vector3 currentPosition)
     {
-
         bool nearby = false;
         var tiles = GameTiles.instance.tiles;
         WorldTile _tile;
@@ -238,8 +235,7 @@ public class Test : MonoBehaviour
         {
             if (tiles.TryGetValue(locationInGrid(coordinate), out _tile))
             {
-               // print(coordinate);
-                if (_tile.army&&_tile.army!=this.army)
+                if (_tile.army&&_tile.army!=this.army&&_tile.army.player.id!=army.player.id)
                 {
                     nearby = true;
                     print("nearby");

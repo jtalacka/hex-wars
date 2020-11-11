@@ -33,8 +33,8 @@ public class ArmyFactory : MonoBehaviour
             case "Infantry":
             default:
                 army = ScriptableObject.CreateInstance<Army>();
-                army.movement = 4;
-                army.movementLeft = 4;
+                army.movement = 40;
+                army.movementLeft = 40;
                 army.price = 1;
                 army.supply = 1;
                 break;

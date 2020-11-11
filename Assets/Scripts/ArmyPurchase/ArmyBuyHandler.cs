@@ -18,7 +18,7 @@ public class ArmyBuyHandler : MonoBehaviour
     public GameObject newArmyCoin;
     public void BuyArmy()
     {
-        army = ArmyInfoRenderer.armyTemplate;
+        army = Object.Instantiate(ArmyInfoRenderer.armyTemplate);
         int quantity = ArmyQuantityHandler.quantity;
         if (quantity > 1 && quantity < 50000)
         {
@@ -72,7 +72,9 @@ public class ArmyBuyHandler : MonoBehaviour
             army.positionInGrid = tile.LocalPlace;
             army.player = Players.currentPlayer;
             Players.currentPlayer.armies.Add(army);
-            tile.Army = army;
+            tile.army = army;
+
+
             //Debug.Log("m1:" + Players.currentPlayer.money);
             Players.currentPlayer.money -= totalPrice;
             //Debug.Log("tp:" + totalPrice);
@@ -80,7 +82,10 @@ public class ArmyBuyHandler : MonoBehaviour
             Players.currentPlayer.supply -= army.supply;
             moneyText.text = "Money: " + Players.currentPlayer.money;
             supplyText.text = "Supply: " + Players.currentPlayer.supply + "/turn";
-
+            if (ArmyPurchasePanelHandler.panelInstance != null)
+            {
+                ArmyPurchasePanelHandler.panelInstance.SetActive(false);
+            }
         }
         
     }

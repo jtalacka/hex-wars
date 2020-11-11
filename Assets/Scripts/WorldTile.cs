@@ -24,5 +24,4 @@ public class WorldTile
 
     public int Cost { get; set; }
 
-    public Army Army { get; set; }
 }

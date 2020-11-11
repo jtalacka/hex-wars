@@ -13,6 +13,7 @@ public class Army : ScriptableObject
     public int movementLeft;
     public int quantity;
     public int supply;
+    public Vector3Int positionInGrid;
     public Sprite icon;
 
 }

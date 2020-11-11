@@ -14,6 +14,7 @@ public class Test : MonoBehaviour
     private List<WorldTile> tile = new List<WorldTile>();
     private Vector3 lastMouseCoordinate = Vector3.zero;
     private WorldTile tempTile;
+    private Army enemyArmy;
     // Update is called once per frame
     List<Tilemap> tilemap;
     private void Start()
@@ -30,6 +31,7 @@ public class Test : MonoBehaviour
         if (tiles.TryGetValue(locationInGrid(transform.position), out _tile))
         {
             _tile.army = army;
+            army.positionInGrid = _tile.LocalPlace;
         }
        // print(locationInGrid(transform.position));
             // tilemap = army.tilemap[0];
@@ -117,6 +119,7 @@ public class Test : MonoBehaviour
                     transform.position = Vector2.MoveTowards(transform.position, temVector, step);
                    // print(tile[0].army);
                     tile[0].army = this.army;
+                    army.positionInGrid = tile[0].LocalPlace;
 
                 }
                 else
@@ -126,6 +129,17 @@ public class Test : MonoBehaviour
                     tempTile = tile[0];
                     tile.RemoveAt(0);
                     army.movementLeft -= 1;
+                    if (tile.Count == 0&&enemy)
+                    {
+                        print("there's an enemy");
+                        this.gameObject.AddComponent<Battle>();
+                        this.GetComponent<Battle>().attacker = army;
+                        this.GetComponent<Battle>().defender = enemyArmy;
+                        this.GetComponent<Battle>().speed = speed;
+                        enemyArmy = null;
+                        enemy = false;
+
+                    }
                 }
             }
             else
@@ -219,6 +233,8 @@ public class Test : MonoBehaviour
         bool nearby = false;
         var tiles = GameTiles.instance.tiles;
         WorldTile _tile;
+        bool changes = false;
+        enemyArmy = null;
         DirectionCalculator.instance.getSurroundingCoordinates(currentPosition).ForEach((coordinate) =>
         {
             if (tiles.TryGetValue(locationInGrid(coordinate), out _tile))
@@ -226,10 +242,13 @@ public class Test : MonoBehaviour
                // print(coordinate);
                 if (_tile.army&&_tile.army!=this.army)
                 {
-                nearby = true;
+                    nearby = true;
                     print("nearby");
+                    enemyArmy = _tile.army;
+                    changes = true;
                 }
             }
+
         }
         );
         return nearby;

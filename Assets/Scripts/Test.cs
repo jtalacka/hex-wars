@@ -16,6 +16,10 @@ public class Test : MonoBehaviour
     List<Tilemap> tilemap;
     private void Start()
     {
+        Players.players = CreatePlayers(2);
+        AssignProvince();
+        Players.currentPlayer = Players.players[0];
+        Debug.Log("Start Player id: " + Players.currentPlayer.id);
         army = Object.Instantiate(army);
         tilemap = new List<Tilemap>();
         foreach(int i in army.TileMaps)
@@ -33,7 +37,6 @@ public class Test : MonoBehaviour
             if (objectPressed)
             {
                 checkMovement();
-
             }
 
 
@@ -179,5 +182,32 @@ public class Test : MonoBehaviour
             tile[i].TilemapMember.SetColor(tile[i].LocalPlace, new Color(1, 1, 1, 1));
             tile.RemoveAt(i);
         }
+    }
+
+    private List<Player> CreatePlayers(int count)
+    {
+        List<Player> players = new List<Player>();
+        Player player;
+        for (int i = 0; i < count; i++)
+        {
+            player = new Player()
+            {
+                id = i,
+                supply = 0,
+                money = 1000,
+                province_nr = 1
+            };
+            players.Add(player);
+        }
+        return players;
+    }
+
+    private void AssignProvince()
+    {
+        GameObject provinceObject = GameObject.Find("center-Recovered");
+        var apph = provinceObject.GetComponent<ArmyPurchasePanelHandler>();
+        Province province = apph.province;
+        Players.players[0].provinces.Add(province);
+        province.player = Players.players[0];
     }
 }

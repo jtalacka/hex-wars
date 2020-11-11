@@ -9,8 +9,7 @@ public class ArmyQuantityHandler : MonoBehaviour
    
     public void HandleChange(string value)
     {
-        
-        //check if it is not greater than sum;
+        //if (value > Players.currentPlayer.money) than bad
     }
 
     public void HandleEditEnd(string value)

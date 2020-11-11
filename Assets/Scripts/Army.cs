@@ -8,6 +8,7 @@ public class Army : ScriptableObject
 {
     public string Type;
     public List<int> TileMaps=new List<int>();
+    public Vector3 position;
     public Player player;
     public int movement;
     public int movementLeft;

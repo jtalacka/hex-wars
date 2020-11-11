@@ -5,16 +5,19 @@ using UnityEngine.UI;
 
 public class TurnHandler : MonoBehaviour
 {
+    public Text moneyText;
     public Text supplyText;
+    public Text incomeText;
+    public Text playerIdText;
     private int currentPlayerIndex = -1;
+    private int income = 0;
     
     // Start is called before the first frame update
     void Start()
     {
-        /*GoToNextPlayer();
         CalculateIncome();
         CalculateSupply();
-        supplyText.text = "Supply: " + Players.currentPlayer.supply + "/turn";*/
+        ShowPlayerInfo();
     }
 
     public void EndTurn()
@@ -24,6 +27,11 @@ public class TurnHandler : MonoBehaviour
         GoToNextPlayer();
         CalculateIncome();
         CalculateSupply();
+        ShowPlayerInfo();
+        if(ArmyPurchasePanelHandler.panelInstance != null)
+        {
+            ArmyPurchasePanelHandler.panelInstance.SetActive(false);
+        }
     }
 
     private void RestoreArmyMovement()
@@ -48,22 +56,30 @@ public class TurnHandler : MonoBehaviour
             Players.currentPlayer = Players.players[currentPlayerIndex];
         }
         Debug.Log(currentPlayerIndex);
+        Debug.Log("Army count: " + Players.currentPlayer.armies.Count);
     }
 
     private void CalculateIncome()
     {
-        //Not Implemented need provinces to do that
+        income = 0;
+        Players.currentPlayer.provinces.ForEach((province) => income += province.income);
+        Players.currentPlayer.money += income;
     }
 
     private void CalculateSupply()
     {
         int supply = 0;
-        foreach (Army army in Players.currentPlayer.armies)
-        {
-            supply += army.supply;
-        }
+        Players.currentPlayer.armies.ForEach((army) => supply += army.supply);
         Players.currentPlayer.supply = -supply;
         Players.currentPlayer.money += supply;
+    }
+
+    private void ShowPlayerInfo()
+    {
+        moneyText.text = "Money: " + Players.currentPlayer.money;
+        supplyText.text = "Supply: " + Players.currentPlayer.supply + "/turn";
+        incomeText.text = "Income: " + income + "/turn";
+        playerIdText.text = "Player nr.: " + Players.currentPlayer.id;
     }
 
 

@@ -10,21 +10,33 @@ public class Test : MonoBehaviour
     public Army army;
     public bool objectPressed = false;
     private bool moving = false;
+    private bool enemy = false;
     private List<WorldTile> tile = new List<WorldTile>();
     private Vector3 lastMouseCoordinate = Vector3.zero;
+    private WorldTile tempTile;
+    private Army enemyArmy;
     // Update is called once per frame
     List<Tilemap> tilemap;
     private void Start()
     {
         army = Object.Instantiate(army);
         tilemap = new List<Tilemap>();
-        foreach(int i in army.TileMaps)
+        var map = GameTiles.instance.tilemap[0];
+        var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
+        foreach (int i in army.TileMaps)
         {
             tilemap.Add(GameTiles.instance.tilemap[i]);
         }
-       // tilemap = army.tilemap[0];
 
-    }
+        if (tiles.TryGetValue(locationInGrid(transform.position), out _tile))
+        {
+            _tile.army = army;
+            army.positionInGrid = _tile.LocalPlace;
+        }
+       // print(locationInGrid(transform.position));
+            // tilemap = army.tilemap[0];
+
+        }
     private void Update()
     {
         if (!moving)
@@ -39,7 +51,8 @@ public class Test : MonoBehaviour
             if (objectPressed)
             {
                 Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                var current = this.tilemap[0].WorldToCell(point);
+               // print(locationInGrid(point));
+                var current = tilemap[0].WorldToCell(point);
                 if (current != lastMouseCoordinate)
                 {
                     lastMouseCoordinate = current;
@@ -50,6 +63,7 @@ public class Test : MonoBehaviour
                         current.x = current.x / Mathf.Abs(current.x);
                     if (current.y != 0)
                         current.y = current.y / Mathf.Abs(current.y);
+
                     current += tile[tile.Count - 1].LocalPlace;
 
                     if (tiles.TryGetValue(current, out _tile))
@@ -58,12 +72,18 @@ public class Test : MonoBehaviour
                         {
                             if (!tile.Contains(_tile))
                             {
-                                if (tile.Count < army.movementLeft+1)
+                                if (tile.Count < army.movementLeft + 1 && !enemy)
                                 {
                                     _tile.TilemapMember.SetTileFlags(_tile.LocalPlace, TileFlags.None);
                                     Color color = Color.green;
+                                    if (enemyNearby(current))
+                                    {
+                                        color = Color.red;
+                                        enemy = true;
+                                    }
+
                                     color.a = 0.5f;
-                                    print(_tile.TilemapMember.color);
+                                    //  print(_tile.TilemapMember.color);
                                     _tile.TilemapMember.SetColor(_tile.LocalPlace, color);
                                     tile.Add(_tile);
                                 }
@@ -75,6 +95,10 @@ public class Test : MonoBehaviour
                             if (tile.Contains(_tile))
                             {
                                 int index = tile.FindIndex(t => t == _tile);
+                                if (index != tile.Count - 1)
+                                {
+                                    enemy = false;
+                                }
                                 resetColorFromSelected(index + 1, tile.Count - 1);
                             }
                         }
@@ -87,18 +111,34 @@ public class Test : MonoBehaviour
             float step = speed * Time.deltaTime;
             if (tile.Count > 0)
             {
-                if (Vector2.Distance(transform.position, tile[0].WorldLocation) > 0.001f)
+                if (Vector2.Distance(transform.position, tile[0].WorldLocation) >= 0.001f)
                 {
                   //  print(transform.position + "----------"+tile[0].WorldLocation);
                     var temVector = tile[0].WorldLocation;
                     transform.position = Vector2.MoveTowards(transform.position, temVector, step);
+                   // print(tile[0].army);
+                    tile[0].army = this.army;
+                    army.positionInGrid = tile[0].LocalPlace;
 
                 }
                 else
                 {
+                    tempTile.army = null;
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
+                    tempTile = tile[0];
                     tile.RemoveAt(0);
                     army.movementLeft -= 1;
+                    if (tile.Count == 0&&enemy)
+                    {
+                        print("there's an enemy");
+                        this.gameObject.AddComponent<Battle>();
+                        this.GetComponent<Battle>().attacker = army;
+                        this.GetComponent<Battle>().defender = enemyArmy;
+                        this.GetComponent<Battle>().speed = speed;
+                        enemyArmy = null;
+                        enemy = false;
+
+                    }
                 }
             }
             else
@@ -113,7 +153,7 @@ public class Test : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            print("testMOve");
+           // print("testMOve");
             var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
             Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var worldPoint = tilemap[0].WorldToCell(point);
@@ -125,6 +165,7 @@ public class Test : MonoBehaviour
                     resetColorFromSelected(index + 1, tile.Count - 1);
                     moving = true;
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
+                    tempTile=tile[0];
                     tile.RemoveAt(0);
                 }
             }
@@ -140,7 +181,7 @@ public class Test : MonoBehaviour
             {
                 if (!objectPressed)
                 {
-                    print("testmouse");
+                   // print("testmouse");
 
                     objectPressed = true;
                     var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
@@ -150,11 +191,11 @@ public class Test : MonoBehaviour
 
                     if (tiles.TryGetValue(worldPoint, out _tile))
                     {
-                        print("Tile " + _tile.Name + " costs: " + _tile.Cost);
+                      //  print("Tile " + _tile.Name + " costs: " + _tile.Cost);
                         _tile.TilemapMember.SetTileFlags(_tile.LocalPlace, TileFlags.None);
                         Color color = Color.green;
                         color.a = 0.5f;
-                        print(_tile.TilemapMember.color);
+                       // print(_tile.TilemapMember.color);
                         _tile.TilemapMember.SetColor(_tile.LocalPlace, color);
                         tile.Add(_tile);
                     }
@@ -179,4 +220,37 @@ public class Test : MonoBehaviour
             tile.RemoveAt(i);
         }
     }
+
+    private Vector3Int locationInGrid(Vector3 position)
+    {
+        return tilemap[0].WorldToCell(position);
+    }
+
+
+    private bool enemyNearby(Vector3 currentPosition)
+    {
+        bool nearby = false;
+        var tiles = GameTiles.instance.tiles;
+        WorldTile _tile;
+        bool changes = false;
+        enemyArmy = null;
+        DirectionCalculator.instance.getSurroundingCoordinates(currentPosition).ForEach((coordinate) =>
+        {
+            if (tiles.TryGetValue(locationInGrid(coordinate), out _tile))
+            {
+               // print(coordinate);
+                if (_tile.army&&_tile.army!=this.army)
+                {
+                    nearby = true;
+                    print("nearby");
+                    enemyArmy = _tile.army;
+                    changes = true;
+                }
+            }
+
+        }
+        );
+        return nearby;
+    }
+
 }

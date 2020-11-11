@@ -69,7 +69,7 @@ public class ArmyBuyHandler : MonoBehaviour
         { 
             
             ArmyFactory.InstantiateArmy(newArmyCoin, position);
-            army.position = position;
+            army.positionInGrid = tile.LocalPlace;
             army.player = Players.currentPlayer;
             Players.currentPlayer.armies.Add(army);
             tile.Army = army;

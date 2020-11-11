@@ -6,4 +6,6 @@ public class Players : MonoBehaviour
 {
     public static List<Player> players = new List<Player>();
     public static Player currentPlayer;
+
+    
 }

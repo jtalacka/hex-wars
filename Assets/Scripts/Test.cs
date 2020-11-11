@@ -45,7 +45,6 @@ public class Test : MonoBehaviour
             if (objectPressed)
             {
                 checkMovement();
-
             }
 
 

@@ -23,4 +23,6 @@ public class WorldTile
     public WorldTile ExploredFrom { get; set; }
 
     public int Cost { get; set; }
+
+    public Army Army { get; set; }
 }

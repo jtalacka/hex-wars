@@ -15,6 +15,11 @@ public class TurnHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Players.players = CreatePlayers(2);
+        AssignProvince();
+        Players.currentPlayer = Players.players[0];
+        Debug.Log("Start Player id: " + Players.currentPlayer.id);
+        GoToNextPlayer();
         CalculateIncome();
         CalculateSupply();
         ShowPlayerInfo();
@@ -71,15 +76,43 @@ public class TurnHandler : MonoBehaviour
         int supply = 0;
         Players.currentPlayer.armies.ForEach((army) => supply += army.supply);
         Players.currentPlayer.supply = -supply;
-        Players.currentPlayer.money += supply;
+        Players.currentPlayer.money -= supply;
     }
 
     private void ShowPlayerInfo()
     {
+        Debug.Log("CP:" + Players.currentPlayer.id);
         moneyText.text = "Money: " + Players.currentPlayer.money;
         supplyText.text = "Supply: " + Players.currentPlayer.supply + "/turn";
         incomeText.text = "Income: " + income + "/turn";
         playerIdText.text = "Player nr.: " + Players.currentPlayer.id;
+    }
+
+    private List<Player> CreatePlayers(int count)
+    {
+        List<Player> players = new List<Player>();
+        Player player;
+        for (int i = 0; i < count; i++)
+        {
+            player = new Player()
+            {
+                id = i,
+                supply = 0,
+                money = 1000,
+                province_nr = 1
+            };
+            players.Add(player);
+        }
+        return players;
+    }
+
+    private void AssignProvince()
+    {
+        GameObject provinceObject = GameObject.Find("center-Recovered");
+        var apph = provinceObject.GetComponent<ArmyPurchasePanelHandler>();
+        Province province = apph.province;
+        Players.players[0].provinces.Add(province);
+        province.player = Players.players[0];
     }
 
 

@@ -39,14 +39,21 @@ public class ArmyFactory : MonoBehaviour
                 army.supply = 1;
                 break;
         }
+        army.Type = type;
         return army;
     }
-    public static Army CreateArmy(string type, Player player, int quantity)
+    public static void InstantiateArmy(GameObject defaultArmy, Vector3 position)
     {
-        Army army = GetArmyTemplate(type);
-        army.player = player;
-        army.quantity = quantity;
-        return army;       
+        Instantiate(defaultArmy, position, Quaternion.identity);    
+    }
+
+    private static void CopyFromTemplate(Army defaultArmy, Army armyTemplate)
+    {
+        defaultArmy.movement = armyTemplate.movement;
+        defaultArmy.movementLeft = armyTemplate.movementLeft;
+        defaultArmy.price = armyTemplate.price;
+        defaultArmy.supply = armyTemplate.supply;
+        defaultArmy.Type = armyTemplate.Type;
     }
 
     public static string ConvertArmyTypeFromIntToString(int type)

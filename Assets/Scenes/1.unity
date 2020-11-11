@@ -46470,7 +46470,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 56.45, y: -31.968}
-  m_SizeDelta: {x: 98.94885, y: 30.000473}
+  m_SizeDelta: {x: 98.94864, y: 30.000473}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59284741
 MonoBehaviour:
@@ -46575,6 +46575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b6f88ab42c6035439688d2a00f0f25c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newArmyCoin: {fileID: 2003847808}
 --- !u!1 &155477630
 GameObject:
   m_ObjectHideFlags: 0
@@ -72334,7 +72335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &225264442
 RectTransform:
   m_ObjectHideFlags: 0
@@ -73630,7 +73631,18 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1158718019}
+        m_MethodName: HandleEditEnd
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -74798,7 +74810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2130919429
 RectTransform:
   m_ObjectHideFlags: 0

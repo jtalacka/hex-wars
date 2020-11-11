@@ -7,18 +7,9 @@ public class ArmyPurchasePanelHandler : MonoBehaviour
 {
     public GameObject panel;
     public Province province;
-    public static Province Pprovince;
+    public static Province instance;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+    
     void OnMouseDown()
     {
         if (panel != null)
@@ -33,7 +24,12 @@ public class ArmyPurchasePanelHandler : MonoBehaviour
                     text.text = $"Income: {province.income}/turn \nSize: {province.teritories.Count}"; 
                 }
             }
-            Pprovince = province;
+            instance = province;
+            if (ArmyBuyHandler.provinceTilesColored)
+            {
+                TileColorHandler.RecolorTiles(province.teritories);
+                ArmyBuyHandler.provinceTilesColored = false;
+            }
         }
     }
 

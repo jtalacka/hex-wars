@@ -114,10 +114,8 @@ public class Test : MonoBehaviour
                     var temVector = tile[0].WorldLocation;
                     transform.position = Vector2.MoveTowards(transform.position, temVector, step);
                     // print(tile[0].army);
-                    if (tile.Count > 1)
-                    {
                         tile[0].army = this.army;
-                    }
+                    
                     army.positionInGrid = tile[0].LocalPlace;
 
                 }
@@ -125,12 +123,6 @@ public class Test : MonoBehaviour
                 {
                     tempTile.army = null;
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
-                    if (tile.Count==1&&tile[0].army!=null)
-                    {
-
-                        tile[0].army.quantity += army.quantity;
-                        Destroy(this.gameObject);
-                    }
                     tempTile = tile[0];
                     tile.RemoveAt(0);
                     army.movementLeft -= 1;
@@ -149,6 +141,26 @@ public class Test : MonoBehaviour
             }
             else
             {
+                var tiles = GameTiles.instance.tiles;
+                Players.currentPlayer.armies.ForEach(armies =>
+                    {
+                        if (armies != this.army)
+                        {
+                            if (armies.positionInGrid == this.army.positionInGrid&&this.army.Type==armies.Type)
+                            {
+                                if (tiles.TryGetValue(army.positionInGrid, out _tile))
+                                {
+                                        _tile.army = armies;
+                                        _tile.army.quantity += army.quantity;
+                                        Destroy(this.gameObject);
+                                }
+
+                            }
+
+                        }
+
+                    });
+
                 moving = false;
                 objectPressed = false;
                 objectPressed = false;

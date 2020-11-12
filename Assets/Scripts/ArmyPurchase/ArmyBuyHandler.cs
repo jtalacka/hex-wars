@@ -10,12 +10,15 @@ public class ArmyBuyHandler : MonoBehaviour
     private Army army;
     private Vector3 lastMouseCoordinate = Vector3.zero;
     private int totalPrice;
+    private GameObject newArmyCoin;
 
     public Text moneyText;
     public Text supplyText;
 
     public static bool provinceTilesColored = false;
-    public GameObject newArmyCoin;
+    public GameObject newInfantryCoin;
+    public GameObject newTankCoin;
+    public GameObject newPlaneCoin;
     public void BuyArmy()
     {
         army = Object.Instantiate(ArmyInfoRenderer.armyTemplate);
@@ -65,7 +68,31 @@ public class ArmyBuyHandler : MonoBehaviour
     private void PlaceNewArmy(WorldTile tile)
     {
         Vector3 position = tile.WorldLocation;
-        if(newArmyCoin != null && army != null)
+        if (army != null)
+        {
+            switch (army.Type)
+            {
+                case "Infantry":
+                    if(newInfantryCoin != null)
+                    {
+                        newArmyCoin = newInfantryCoin;
+                    }
+                    break;
+                case "Tank":
+                    if(newTankCoin != null)
+                    {
+                        newArmyCoin = newTankCoin;
+                    }
+                    break;
+                case "Plane":
+                    if(newPlaneCoin != null)
+                    {
+                        newArmyCoin = newPlaneCoin;
+                    }
+                    break;
+            }
+        }
+        if(newArmyCoin != null)
         { 
             
             ArmyFactory.InstantiateArmy(newArmyCoin, position);

@@ -15,6 +15,7 @@ public class Test : MonoBehaviour
     private Vector3 lastMouseCoordinate = Vector3.zero;
     private WorldTile tempTile;
     private Army enemyArmy;
+    private bool merge=false;
     // Update is called once per frame
     List<Tilemap> tilemap;
     private void Start()
@@ -107,13 +108,16 @@ public class Test : MonoBehaviour
             float step = speed * Time.deltaTime;
             if (tile.Count > 0)
             {
-                if (Vector2.Distance(transform.position, tile[0].WorldLocation) >= 0.001f)
+                    if (Vector2.Distance(transform.position, tile[0].WorldLocation) >= 0.001f)
                 {
                   //  print(transform.position + "----------"+tile[0].WorldLocation);
                     var temVector = tile[0].WorldLocation;
                     transform.position = Vector2.MoveTowards(transform.position, temVector, step);
-                   // print(tile[0].army);
-                    tile[0].army = this.army;
+                    // print(tile[0].army);
+                    if (tile.Count > 1)
+                    {
+                        tile[0].army = this.army;
+                    }
                     army.positionInGrid = tile[0].LocalPlace;
 
                 }
@@ -121,6 +125,12 @@ public class Test : MonoBehaviour
                 {
                     tempTile.army = null;
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
+                    if (tile.Count==1&&tile[0].army!=null)
+                    {
+
+                        tile[0].army.quantity += army.quantity;
+                        Destroy(this.gameObject);
+                    }
                     tempTile = tile[0];
                     tile.RemoveAt(0);
                     army.movementLeft -= 1;
@@ -172,38 +182,50 @@ public class Test : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)&&army.player.id==Players.currentPlayer.id)
         {
-            print(army.player.id);
-            Input.ResetInputAxes();
-            if (!moving)
+            bool otherArmyPressed = false;
+            foreach (var go in GameObject.FindGameObjectsWithTag("army") as GameObject[])
             {
-                if (!objectPressed)
+                if (go.GetComponent<Test>().objectPressed==true)
                 {
-                   // print("testmouse");
-
-                    objectPressed = true;
-                    var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
-                    Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    lastMouseCoordinate = tilemap[0].WorldToCell(point);
-                    var worldPoint = tilemap[0].WorldToCell(point);
-
-                    if (tiles.TryGetValue(worldPoint, out _tile))
-                    {
-                      //  print("Tile " + _tile.Name + " costs: " + _tile.Cost);
-                        _tile.TilemapMember.SetTileFlags(_tile.LocalPlace, TileFlags.None);
-                        Color color = Color.green;
-                        color.a = 0.5f;
-                       // print(_tile.TilemapMember.color);
-                        _tile.TilemapMember.SetColor(_tile.LocalPlace, color);
-                        tile.Add(_tile);
-                    }
-
-                    objectPressed = true;
+                    otherArmyPressed = true;
+                    break;
                 }
-                else
+            }
+            if (otherArmyPressed == false)
+            {
+                print(army.player.id);
+                Input.ResetInputAxes();
+                if (!moving)
                 {
-                    resetColorFromSelected(0, tile.Count - 1);
-                    objectPressed = false;
-                    objectPressed = false;
+                    if (!objectPressed)
+                    {
+                        // print("testmouse");
+
+                        objectPressed = true;
+                        var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
+                        Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        lastMouseCoordinate = tilemap[0].WorldToCell(point);
+                        var worldPoint = tilemap[0].WorldToCell(point);
+
+                        if (tiles.TryGetValue(worldPoint, out _tile))
+                        {
+                            //  print("Tile " + _tile.Name + " costs: " + _tile.Cost);
+                            _tile.TilemapMember.SetTileFlags(_tile.LocalPlace, TileFlags.None);
+                            Color color = Color.green;
+                            color.a = 0.5f;
+                            // print(_tile.TilemapMember.color);
+                            _tile.TilemapMember.SetColor(_tile.LocalPlace, color);
+                            tile.Add(_tile);
+                        }
+
+                        objectPressed = true;
+                    }
+                    else
+                    {
+                        resetColorFromSelected(0, tile.Count - 1);
+                        objectPressed = false;
+                        objectPressed = false;
+                    }
                 }
             }
         }

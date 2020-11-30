@@ -19,10 +19,14 @@ public class ArmyInformationUI : MonoBehaviour
     {
         if (armyMovement.objectPressed)
         {
-            textField.text = "Type: " + armyMovement.army.Type+"\n";
-            textField.text += "Quantity " + armyMovement.army.quantity+"\n";
+            textField.text = "Type: " + armyMovement.army.Type + "\n";
+            textField.text += "Quantity " + armyMovement.army.quantity + "\n";
             textField.text += "Movement " + armyMovement.army.movementLeft + "/" + armyMovement.army.movement + "\n";
 
+        }
+        else
+        {
+            textField.text = "";
         }
         
     }

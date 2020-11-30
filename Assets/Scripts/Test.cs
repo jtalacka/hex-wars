@@ -144,7 +144,7 @@ public class Test : MonoBehaviour
                 var tiles = GameTiles.instance.tiles;
                 Players.currentPlayer.armies.ForEach(armies =>
                     {
-                        if (armies != this.army)
+                        if (armies != this.army&&this.army!=null)
                         {
                             if (armies.positionInGrid == this.army.positionInGrid&&this.army.Type==armies.Type)
                             {

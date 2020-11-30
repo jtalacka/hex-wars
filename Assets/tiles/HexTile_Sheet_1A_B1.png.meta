@@ -1,0 +1,3212 @@
+fileFormatVersion: 2
+guid: 06bf110a5ed4a4f4e8a1bc1016ccb395
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4463287459589832913
+    second: HexTile_Sheet_1A_B1_0
+  - first:
+      213: -6488764746965902960
+    second: HexTile_Sheet_1A_B1_1
+  - first:
+      213: -980672931494591703
+    second: HexTile_Sheet_1A_B1_2
+  - first:
+      213: -6629613718368586121
+    second: HexTile_Sheet_1A_B1_3
+  - first:
+      213: 8258973198978584086
+    second: HexTile_Sheet_1A_B1_4
+  - first:
+      213: -3364076966340268289
+    second: HexTile_Sheet_1A_B1_5
+  - first:
+      213: 4699011072379768206
+    second: HexTile_Sheet_1A_B1_6
+  - first:
+      213: 7789012376569227605
+    second: HexTile_Sheet_1A_B1_7
+  - first:
+      213: 453298987160051482
+    second: HexTile_Sheet_1A_B1_8
+  - first:
+      213: -981979801334820003
+    second: HexTile_Sheet_1A_B1_9
+  - first:
+      213: -4229137899352851619
+    second: HexTile_Sheet_1A_B1_10
+  - first:
+      213: -1490620531658570135
+    second: HexTile_Sheet_1A_B1_11
+  - first:
+      213: -537815993848340284
+    second: HexTile_Sheet_1A_B1_12
+  - first:
+      213: 8516732638463751562
+    second: HexTile_Sheet_1A_B1_13
+  - first:
+      213: -295355488356828735
+    second: HexTile_Sheet_1A_B1_14
+  - first:
+      213: 3442401482168773739
+    second: HexTile_Sheet_1A_B1_15
+  - first:
+      213: -9107254836140834309
+    second: HexTile_Sheet_1A_B1_16
+  - first:
+      213: -3008335211746699789
+    second: HexTile_Sheet_1A_B1_17
+  - first:
+      213: 3189688326376704252
+    second: HexTile_Sheet_1A_B1_18
+  - first:
+      213: -5935925574308034828
+    second: HexTile_Sheet_1A_B1_19
+  - first:
+      213: -3291197491699799282
+    second: HexTile_Sheet_1A_B1_20
+  - first:
+      213: 2346796134976191589
+    second: HexTile_Sheet_1A_B1_21
+  - first:
+      213: -5488335925855902609
+    second: HexTile_Sheet_1A_B1_22
+  - first:
+      213: 5610227955284498090
+    second: HexTile_Sheet_1A_B1_23
+  - first:
+      213: 2071040011329085997
+    second: HexTile_Sheet_1A_B1_24
+  - first:
+      213: -917507513420088531
+    second: HexTile_Sheet_1A_B1_25
+  - first:
+      213: -2684409983196419757
+    second: HexTile_Sheet_1A_B1_26
+  - first:
+      213: 4919037312660415816
+    second: HexTile_Sheet_1A_B1_27
+  - first:
+      213: 7624997913277574684
+    second: HexTile_Sheet_1A_B1_28
+  - first:
+      213: -4570162854032646824
+    second: HexTile_Sheet_1A_B1_29
+  - first:
+      213: 7967180391894706743
+    second: HexTile_Sheet_1A_B1_30
+  - first:
+      213: 5041575901573524101
+    second: HexTile_Sheet_1A_B1_31
+  - first:
+      213: 4955842589153560074
+    second: HexTile_Sheet_1A_B1_32
+  - first:
+      213: 2765010063690436704
+    second: HexTile_Sheet_1A_B1_33
+  - first:
+      213: -7351928184262050075
+    second: HexTile_Sheet_1A_B1_34
+  - first:
+      213: 1487809262344440301
+    second: HexTile_Sheet_1A_B1_35
+  - first:
+      213: 4649805089479045131
+    second: HexTile_Sheet_1A_B1_36
+  - first:
+      213: 3547772944932415392
+    second: HexTile_Sheet_1A_B1_37
+  - first:
+      213: -2820012197728536259
+    second: HexTile_Sheet_1A_B1_38
+  - first:
+      213: -3142696643804806584
+    second: HexTile_Sheet_1A_B1_39
+  - first:
+      213: -2086612722467490089
+    second: HexTile_Sheet_1A_B1_40
+  - first:
+      213: 7702138650147926869
+    second: HexTile_Sheet_1A_B1_41
+  - first:
+      213: 3144338074950536746
+    second: HexTile_Sheet_1A_B1_42
+  - first:
+      213: -4579149719511722611
+    second: HexTile_Sheet_1A_B1_43
+  - first:
+      213: 1611940473368050513
+    second: HexTile_Sheet_1A_B1_44
+  - first:
+      213: -6367233711695030773
+    second: HexTile_Sheet_1A_B1_45
+  - first:
+      213: 5730983963591996955
+    second: HexTile_Sheet_1A_B1_46
+  - first:
+      213: -2825922994946379543
+    second: HexTile_Sheet_1A_B1_47
+  - first:
+      213: 7127406663669494894
+    second: HexTile_Sheet_1A_B1_48
+  - first:
+      213: -7145925460670509113
+    second: HexTile_Sheet_1A_B1_49
+  - first:
+      213: -8291170376843131425
+    second: HexTile_Sheet_1A_B1_50
+  - first:
+      213: -6144739004597541121
+    second: HexTile_Sheet_1A_B1_51
+  - first:
+      213: -1034396822757748555
+    second: HexTile_Sheet_1A_B1_52
+  - first:
+      213: -7879654987288720567
+    second: HexTile_Sheet_1A_B1_53
+  - first:
+      213: -1046793292821749072
+    second: HexTile_Sheet_1A_B1_54
+  - first:
+      213: -6288878585335869545
+    second: HexTile_Sheet_1A_B1_55
+  - first:
+      213: -5150535432850258459
+    second: HexTile_Sheet_1A_B1_56
+  - first:
+      213: -8586142002872324683
+    second: HexTile_Sheet_1A_B1_57
+  - first:
+      213: 2038683258580576051
+    second: HexTile_Sheet_1A_B1_58
+  - first:
+      213: 6922191448356231340
+    second: HexTile_Sheet_1A_B1_59
+  - first:
+      213: -1590157882876908983
+    second: HexTile_Sheet_1A_B1_60
+  - first:
+      213: 6562480502142264427
+    second: HexTile_Sheet_1A_B1_61
+  - first:
+      213: 766369142210035211
+    second: HexTile_Sheet_1A_B1_62
+  - first:
+      213: -7154747292774118214
+    second: HexTile_Sheet_1A_B1_63
+  - first:
+      213: 2093887286924010163
+    second: HexTile_Sheet_1A_B1_64
+  - first:
+      213: 902664847435729558
+    second: HexTile_Sheet_1A_B1_65
+  - first:
+      213: 2743377519570487333
+    second: HexTile_Sheet_1A_B1_66
+  - first:
+      213: -2705385879685404425
+    second: HexTile_Sheet_1A_B1_67
+  - first:
+      213: 2461330752686016484
+    second: HexTile_Sheet_1A_B1_68
+  - first:
+      213: 8123964820901176579
+    second: HexTile_Sheet_1A_B1_69
+  - first:
+      213: -2065304156916829021
+    second: HexTile_Sheet_1A_B1_70
+  - first:
+      213: 8820789522296822340
+    second: HexTile_Sheet_1A_B1_71
+  - first:
+      213: 6428923800757128725
+    second: HexTile_Sheet_1A_B1_72
+  - first:
+      213: -4180572966361618980
+    second: HexTile_Sheet_1A_B1_73
+  - first:
+      213: -3889271473284950837
+    second: HexTile_Sheet_1A_B1_74
+  - first:
+      213: -2800413676258605536
+    second: HexTile_Sheet_1A_B1_75
+  - first:
+      213: -4020579492779829730
+    second: HexTile_Sheet_1A_B1_76
+  - first:
+      213: -4137391215827816358
+    second: HexTile_Sheet_1A_B1_77
+  - first:
+      213: 3057358238279275136
+    second: HexTile_Sheet_1A_B1_78
+  - first:
+      213: -2949798279286601042
+    second: HexTile_Sheet_1A_B1_79
+  - first:
+      213: 8890697170720014007
+    second: HexTile_Sheet_1A_B1_80
+  - first:
+      213: -3973867946880872777
+    second: HexTile_Sheet_1A_B1_81
+  - first:
+      213: -1305940705938623354
+    second: HexTile_Sheet_1A_B1_82
+  - first:
+      213: -7336540308847199631
+    second: HexTile_Sheet_1A_B1_83
+  - first:
+      213: 2698781096591587780
+    second: HexTile_Sheet_1A_B1_84
+  - first:
+      213: 6896679339833177011
+    second: HexTile_Sheet_1A_B1_85
+  - first:
+      213: -7872323682939210199
+    second: HexTile_Sheet_1A_B1_86
+  - first:
+      213: -5910994733839198303
+    second: HexTile_Sheet_1A_B1_87
+  - first:
+      213: 5294365432285053484
+    second: HexTile_Sheet_1A_B1_88
+  - first:
+      213: -6639036364590141010
+    second: HexTile_Sheet_1A_B1_89
+  - first:
+      213: -5989729480063079207
+    second: HexTile_Sheet_1A_B1_90
+  - first:
+      213: 3015359868090666836
+    second: HexTile_Sheet_1A_B1_91
+  - first:
+      213: 3265676105320918741
+    second: HexTile_Sheet_1A_B1_92
+  - first:
+      213: -1070950644657009111
+    second: HexTile_Sheet_1A_B1_93
+  - first:
+      213: -4752993188849194835
+    second: HexTile_Sheet_1A_B1_94
+  - first:
+      213: -7477689547406441714
+    second: HexTile_Sheet_1A_B1_95
+  - first:
+      213: 2081698875661962328
+    second: HexTile_Sheet_1A_B1_96
+  - first:
+      213: 2080419762780842376
+    second: HexTile_Sheet_1A_B1_97
+  - first:
+      213: -3583905803937063361
+    second: HexTile_Sheet_1A_B1_98
+  - first:
+      213: -7062896160417556200
+    second: HexTile_Sheet_1A_B1_99
+  - first:
+      213: 3397370185919738604
+    second: HexTile_Sheet_1A_B1_100
+  - first:
+      213: -7466700555322823493
+    second: HexTile_Sheet_1A_B1_101
+  - first:
+      213: -1752828295395096837
+    second: HexTile_Sheet_1A_B1_102
+  - first:
+      213: -3559125460396649548
+    second: HexTile_Sheet_1A_B1_103
+  - first:
+      213: 2526626746669792819
+    second: HexTile_Sheet_1A_B1_104
+  - first:
+      213: 1643808713571187434
+    second: HexTile_Sheet_1A_B1_105
+  - first:
+      213: -1073402484175726318
+    second: HexTile_Sheet_1A_B1_106
+  - first:
+      213: -1501680698027166575
+    second: HexTile_Sheet_1A_B1_107
+  - first:
+      213: -7328140636054182937
+    second: HexTile_Sheet_1A_B1_108
+  - first:
+      213: 5652985313440635526
+    second: HexTile_Sheet_1A_B1_109
+  - first:
+      213: 6774022507854256108
+    second: HexTile_Sheet_1A_B1_110
+  - first:
+      213: -4356302353217306725
+    second: HexTile_Sheet_1A_B1_111
+  - first:
+      213: 7366364691917484610
+    second: HexTile_Sheet_1A_B1_112
+  - first:
+      213: 7764051567057497985
+    second: HexTile_Sheet_1A_B1_113
+  - first:
+      213: 8266844995173436230
+    second: HexTile_Sheet_1A_B1_114
+  - first:
+      213: -6767853995352129494
+    second: HexTile_Sheet_1A_B1_115
+  - first:
+      213: 3935778381305891572
+    second: HexTile_Sheet_1A_B1_116
+  - first:
+      213: -584529699988741380
+    second: HexTile_Sheet_1A_B1_117
+  - first:
+      213: 8790168620366400073
+    second: HexTile_Sheet_1A_B1_118
+  - first:
+      213: -5122659227401428011
+    second: HexTile_Sheet_1A_B1_119
+  - first:
+      213: 71531552905088975
+    second: HexTile_Sheet_1A_B1_120
+  - first:
+      213: -2330298500009362396
+    second: HexTile_Sheet_1A_B1_121
+  - first:
+      213: -7738566635121317392
+    second: HexTile_Sheet_1A_B1_122
+  - first:
+      213: -887863118755661064
+    second: HexTile_Sheet_1A_B1_123
+  - first:
+      213: 2343511689579623898
+    second: HexTile_Sheet_1A_B1_124
+  - first:
+      213: -8394968898287403596
+    second: HexTile_Sheet_1A_B1_125
+  - first:
+      213: 6995460234824103450
+    second: HexTile_Sheet_1A_B1_126
+  - first:
+      213: -5338756389642292902
+    second: HexTile_Sheet_1A_B1_127
+  - first:
+      213: 647512689022561559
+    second: HexTile_Sheet_1A_B1_128
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1825
+        width: 193
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0ce470c48c0fd30800000000000000
+      internalID: 4463287459589832913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_1
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1819
+        width: 196
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099150277d643f5a0800000000000000
+      internalID: -6488764746965902960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1813
+        width: 196
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9238c652a23f362f0800000000000000
+      internalID: -980672931494591703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_3
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1813
+        width: 197
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7767596c271eef3a0800000000000000
+      internalID: -6629613718368586121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_4
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1819
+        width: 194
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e0796dd54cd9270800000000000000
+      internalID: 8258973198978584086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_5
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1811
+        width: 197
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffee630a2d56051d0800000000000000
+      internalID: -3364076966340268289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_6
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 1809
+        width: 199
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8dc2d48cad363140800000000000000
+      internalID: 4699011072379768206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_7
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1809
+        width: 198
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559a7801d71281c60800000000000000
+      internalID: 7789012376569227605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_8
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 1814
+        width: 200
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f18b2f6017a4600800000000000000
+      internalID: 453298987160051482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1548
+        width: 201
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5354dcc29e4f52f0800000000000000
+      internalID: -981979801334820003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_10
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1588
+        width: 201
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b7eeacc751f45c0800000000000000
+      internalID: -4229137899352851619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_11
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 1589
+        width: 201
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966469b2680405be0800000000000000
+      internalID: -1490620531658570135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_12
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 1593
+        width: 199
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0652cf33b4988f0800000000000000
+      internalID: -537815993848340284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_13
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 1597
+        width: 199
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a857b9a0633813670800000000000000
+      internalID: 8516732638463751562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_14
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1585
+        width: 205
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9770a8fbfa6ebf0800000000000000
+      internalID: -295355488356828735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_15
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1588
+        width: 197
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ca2fec8edd5cf20800000000000000
+      internalID: 3442401482168773739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_16
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 1593
+        width: 201
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf10ed49af78c9180800000000000000
+      internalID: -9107254836140834309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_17
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 1587
+        width: 198
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5d982501f3046d0800000000000000
+      internalID: -3008335211746699789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_18
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1517
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8c4e512ac044c20800000000000000
+      internalID: 3189688326376704252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_19
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1370
+        width: 200
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6863ad32b5f9da0800000000000000
+      internalID: -5935925574308034828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_20
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1370
+        width: 197
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ba39d91515352d0800000000000000
+      internalID: -3291197491699799282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_21
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1369
+        width: 199
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cf381a6ae719020800000000000000
+      internalID: 2346796134976191589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_22
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1371
+        width: 197
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64285bcd8385d3b0800000000000000
+      internalID: -5488335925855902609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_23
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1372
+        width: 200
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6d2bfd9988bdd40800000000000000
+      internalID: 5610227955284498090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_24
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 1375
+        width: 202
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2224eedaefcdbc10800000000000000
+      internalID: 2071040011329085997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_25
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 1375
+        width: 207
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bf7d717cb5443f0800000000000000
+      internalID: -917507513420088531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_26
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 1369
+        width: 199
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359a018c75f0fbad0800000000000000
+      internalID: -2684409983196419757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_27
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1145
+        width: 199
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845240aaf5ee34440800000000000000
+      internalID: 4919037312660415816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_28
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1143
+        width: 198
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e2102043f61d960800000000000000
+      internalID: 7624997913277574684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_29
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1143
+        width: 197
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dd2b719158390c0800000000000000
+      internalID: -4570162854032646824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_30
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1142
+        width: 191
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a6750ca5c119e60800000000000000
+      internalID: 7967180391894706743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_31
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1293
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58aa571329647f540800000000000000
+      internalID: 5041575901573524101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_32
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1140
+        width: 198
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a060041e390b6c440800000000000000
+      internalID: 4955842589153560074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_33
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1128
+        width: 206
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06016a6d00a4f5620800000000000000
+      internalID: 2765010063690436704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_34
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 1135
+        width: 194
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eeb0e2c444b8f990800000000000000
+      internalID: -7351928184262050075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_35
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1132
+        width: 203
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9839f24a2c5a410800000000000000
+      internalID: 1487809262344440301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_36
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 1122
+        width: 203
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00b339d71d678040800000000000000
+      internalID: 4649805089479045131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_37
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 911
+        width: 198
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7207e42b83c3130800000000000000
+      internalID: 3547772944932415392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_38
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 908
+        width: 197
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d393f14e8dd4dd8d0800000000000000
+      internalID: -2820012197728536259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_39
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1106
+        width: 39
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842c33d9d06e264d0800000000000000
+      internalID: -3142696643804806584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_40
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 893
+        width: 203
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6b385c8ccda03e0800000000000000
+      internalID: -2086612722467490089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_41
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 1108
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553bfdc6b4e73ea60800000000000000
+      internalID: 7702138650147926869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_42
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 902
+        width: 201
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e892bd1dee2ab20800000000000000
+      internalID: 3144338074950536746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_43
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 895
+        width: 213
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d859c2b67979370c0800000000000000
+      internalID: -4579149719511722611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_44
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 894
+        width: 195
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b7d22f153ce5610800000000000000
+      internalID: 1611940473368050513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_45
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 895
+        width: 196
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06968c9caa03a7a0800000000000000
+      internalID: -6367233711695030773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_46
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 889
+        width: 199
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b167c530d8b888f40800000000000000
+      internalID: 5730983963591996955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_47
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 1064
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0fc9b220e48c8d0800000000000000
+      internalID: -2825922994946379543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_48
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1038
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64b5c51992a9e260800000000000000
+      internalID: 7127406663669494894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_49
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 836
+        width: 193
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf805d77a294dc90800000000000000
+      internalID: -7145925460670509113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_50
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 887
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd506048878dfec80800000000000000
+      internalID: -8291170376843131425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_51
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 682
+        width: 197
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6e9797e6089baa0800000000000000
+      internalID: -6144739004597541121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_52
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 667
+        width: 198
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b05bb6f19515a1f0800000000000000
+      internalID: -1034396822757748555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_53
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 860
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b450a8987d5a290800000000000000
+      internalID: -7879654987288720567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_54
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 857
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2291cdb0b0971f0800000000000000
+      internalID: -1046793292821749072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_55
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 658
+        width: 210
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f8e7d1f3a69b8a0800000000000000
+      internalID: -6288878585335869545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_56
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 860
+        width: 45
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5c5e1005f9588b0800000000000000
+      internalID: -5150535432850258459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_57
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 626
+        width: 197
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdebb7f655e7d880800000000000000
+      internalID: -8586142002872324683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_58
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 842
+        width: 93
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3372b3d4f9bda4c10800000000000000
+      internalID: 2038683258580576051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_59
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 655
+        width: 201
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8158a6270901060800000000000000
+      internalID: 6922191448356231340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_60
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 858
+        width: 43
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94aa55e94df9ee9e0800000000000000
+      internalID: -1590157882876908983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_61
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 858
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64ed974f3d921b50800000000000000
+      internalID: 6562480502142264427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_62
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 779
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0eff38aca0b2aa00800000000000000
+      internalID: 766369142210035211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_63
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 657
+        width: 200
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcc284ae3b35bc90800000000000000
+      internalID: -7154747292774118214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_64
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 656
+        width: 195
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2efc0c46bfe0d10800000000000000
+      internalID: 2093887286924010163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_65
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 652
+        width: 196
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a83ae65e8e68c00800000000000000
+      internalID: 902664847435729558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_66
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 742
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5288acaa15f621620800000000000000
+      internalID: 2743377519570487333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_67
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 745
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f86efc40e9847ad0800000000000000
+      internalID: -2705385879685404425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_68
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 752
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e748946747682220800000000000000
+      internalID: 2461330752686016484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_69
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 746
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305a59546fe1eb070800000000000000
+      internalID: 8123964820901176579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_70
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 582
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4b5ddcfc09653e0800000000000000
+      internalID: -2065304156916829021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_71
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 436
+        width: 199
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a5df2065db96a70800000000000000
+      internalID: 8820789522296822340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_72
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 639
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ece288220283950800000000000000
+      internalID: 6428923800757128725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_73
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 627
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd52a66690f9bf5c0800000000000000
+      internalID: -4180572966361618980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_74
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 624
+        width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc45ac78338860ac0800000000000000
+      internalID: -3889271473284950837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_75
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 637
+        width: 41
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026c572499ee229d0800000000000000
+      internalID: -2800413676258605536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_76
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 431
+        width: 196
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1653a5d0480438c0800000000000000
+      internalID: -4020579492779829730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_77
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 437
+        width: 198
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50f2cb2c980596c0800000000000000
+      internalID: -4137391215827816358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_78
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 424
+        width: 196
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08210cf7e1bed6a20800000000000000
+      internalID: 3057358238279275136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_79
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 421
+        width: 199
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa401cf7163017d0800000000000000
+      internalID: -2949798279286601042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_80
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 421
+        width: 200
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be365ac8f9126b70800000000000000
+      internalID: 8890697170720014007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_81
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 421
+        width: 201
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7becad1282cf9d8c0800000000000000
+      internalID: -3973867946880872777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_82
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 608
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6843eccd8dd50ede0800000000000000
+      internalID: -1305940705938623354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_83
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 591
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17af3d2b57f5f2a90800000000000000
+      internalID: -7336540308847199631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_84
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 411
+        width: 198
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c971eccb1ff37520800000000000000
+      internalID: 2698781096591587780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_85
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 532
+        width: 8
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b33884c15de5bf50800000000000000
+      internalID: 6896679339833177011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_86
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 542
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9267389d153efb290800000000000000
+      internalID: -7872323682939210199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_87
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 521
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a75f4c7b9de7fda0800000000000000
+      internalID: -5910994733839198303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_88
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 524
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2245765f4d597940800000000000000
+      internalID: 5294365432285053484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_89
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 206
+        width: 209
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea134bdf9976dd3a0800000000000000
+      internalID: -6639036364590141010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_90
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 395
+        width: 77
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dca728d5c430eca0800000000000000
+      internalID: -5989729480063079207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_91
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 398
+        width: 58
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f438fe2d5b8d920800000000000000
+      internalID: 3015359868090666836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_92
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 400
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de62219d13025d20800000000000000
+      internalID: 3265676105320918741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_93
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 392
+        width: 55
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e4e3510183321f0800000000000000
+      internalID: -1070950644657009111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_94
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 367
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8eace80e9f90eb0800000000000000
+      internalID: -4752993188849194835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_95
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 403
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e030032a9f8e93890800000000000000
+      internalID: -7477689547406441714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_96
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 370
+        width: 11
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c492d191ea3ec10800000000000000
+      internalID: 2081698875661962328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_97
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 377
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889214070c22fdc10800000000000000
+      internalID: 2080419762780842376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_98
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 200
+        width: 200
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ededfd8a8634ec0800000000000000
+      internalID: -3583905803937063361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_99
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 198
+        width: 195
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81957d8ec5d8bfd90800000000000000
+      internalID: -7062896160417556200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_100
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 357
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2bf3e1f22e52f20800000000000000
+      internalID: 3397370185919738604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_101
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 353
+        width: 11
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc65cbb763f06890800000000000000
+      internalID: -7466700555322823493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_102
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 365
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6c8b4c3f3bca7e0800000000000000
+      internalID: -1752828295395096837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_103
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 364
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b3520630427b9ec0800000000000000
+      internalID: -3559125460396649548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_104
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 349
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ef043b3a1601320800000000000000
+      internalID: 2526626746669792819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_105
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 172
+        width: 201
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea3a13d05bffc610800000000000000
+      internalID: 1643808713571187434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_106
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 310
+        width: 37
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2191fa5b0228a11f0800000000000000
+      internalID: -1073402484175726318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_107
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 307
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194b7048c55f82be0800000000000000
+      internalID: -1501680698027166575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_108
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 275
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3a2ebeae63d4a90800000000000000
+      internalID: -7328140636054182937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_109
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 293
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a11281130737e40800000000000000
+      internalID: 5652985313440635526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_110
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 290
+        width: 39
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce75721a499220e50800000000000000
+      internalID: 6774022507854256108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_111
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 267
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fb846271e4b83c0800000000000000
+      internalID: -4356302353217306725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_112
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 269
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242b8bb98a59a3660800000000000000
+      internalID: 7366364691917484610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_113
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 252
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fe648b3c37fbb60800000000000000
+      internalID: 7764051567057497985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_114
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 201
+        width: 28
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b478639bbb9b270800000000000000
+      internalID: 8266844995173436230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_115
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 120
+        width: 112
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20045b16a0c312a0800000000000000
+      internalID: -6767853995352129494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_116
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 143
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa466cc591be9630800000000000000
+      internalID: 3935778381305891572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_117
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 149
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf26187b55553e7f0800000000000000
+      internalID: -584529699988741380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_118
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 99
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a89b4b9c3fcf970800000000000000
+      internalID: 8790168620366400073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_119
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 91
+        width: 58
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d36c5dd298a8e8b0800000000000000
+      internalID: -5122659227401428011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_120
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 61
+        width: 40
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfc32181912ef000800000000000000
+      internalID: 71531552905088975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_121
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 57
+        width: 44
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42cf0565cdd19afd0800000000000000
+      internalID: -2330298500009362396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_122
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 66
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f967e265a61b9490800000000000000
+      internalID: -7738566635121317392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_123
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 29
+        width: 65
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8faf565923dada3f0800000000000000
+      internalID: -887863118755661064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_124
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 42
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad57e581773d58020800000000000000
+      internalID: 2343511689579623898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_125
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 29
+        width: 78
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd7025f3441f7b80800000000000000
+      internalID: -8394968898287403596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_126
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 26
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16bf01250ed41160800000000000000
+      internalID: 6995460234824103450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_127
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 27
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51360d795de8e5b0800000000000000
+      internalID: -5338756389642292902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexTile_Sheet_1A_B1_128
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 19
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d6fb82c5d6cf800800000000000000
+      internalID: 647512689022561559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,19 +8,20 @@ public class ArmyBuyHandler : MonoBehaviour
 {
     private Province province;
     private Army army;
-    private Vector3 lastMouseCoordinate = Vector3.zero;
     private int totalPrice;
     private GameObject newArmyCoin;
 
     public Text moneyText;
     public Text supplyText;
 
+    public static List<Vector3Int> freeSurroudingTiles = new List<Vector3Int>();
     public static bool provinceTilesColored = false;
     public GameObject newInfantryCoin;
     public GameObject newTankCoin;
     public GameObject newPlaneCoin;
     public void BuyArmy()
     {
+        var tiles = GameTiles.instance.tiles;
         army = Object.Instantiate(ArmyInfoRenderer.armyTemplate);
         int quantity = ArmyQuantityHandler.quantity;
         if (quantity > 1 && quantity < 50000)
@@ -32,7 +33,17 @@ public class ArmyBuyHandler : MonoBehaviour
         province = ArmyPurchasePanelHandler.instance;
         if(province != null)
         {
-            TileColorHandler.ColorTiles(province.teritories, Color.red);
+            var center = province.center;
+            WorldTile _tile;
+            var surroudingCoords = DirectionCalculator.instance.getSurroundingCoordinates(center);
+            surroudingCoords.ForEach((coordinate) => {
+                if (tiles.TryGetValue(GameTiles.instance.tilemap[0].WorldToCell(coordinate), out _tile) && 
+                (_tile.army == null)) 
+                {
+                    freeSurroudingTiles.Add(_tile.LocalPlace);
+                }
+            });
+            TileColorHandler.ColorTiles(freeSurroudingTiles, Color.red);
             provinceTilesColored = true;
         }
     }
@@ -43,25 +54,22 @@ public class ArmyBuyHandler : MonoBehaviour
         {
             Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var current = GameTiles.instance.tilemap[0].WorldToCell(point);
-            if (current != lastMouseCoordinate)
+            var tiles = GameTiles.instance.tiles;
+            WorldTile tile;
+            if (tiles.TryGetValue(current, out tile))
             {
-                lastMouseCoordinate = current;
-                var tiles = GameTiles.instance.tiles;
-                WorldTile tile;
-                if (tiles.TryGetValue(current, out tile))
+                if (province != null)
                 {
-                    if (province != null)
+                    if (freeSurroudingTiles.Contains(tile.LocalPlace))
                     {
-                        if (province.teritories.Contains(tile.LocalPlace))
-                        {
-                            TileColorHandler.RecolorTiles(province.teritories);
-                            provinceTilesColored = false;
-                            PlaceNewArmy(tile);
-                        }
+                        TileColorHandler.RecolorTiles(freeSurroudingTiles);
+                        freeSurroudingTiles.Clear();
+                        provinceTilesColored = false;
+                        PlaceNewArmy(tile);
                     }
                 }
-                Input.ResetInputAxes();
             }
+            Input.ResetInputAxes();
         }
     }
 

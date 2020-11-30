@@ -34,7 +34,7 @@ public class ArmyPurchasePanelHandler : MonoBehaviour
                 }
                 if (ArmyBuyHandler.provinceTilesColored)
                 {
-                    TileColorHandler.RecolorTiles(province.teritories);
+                    TileColorHandler.RecolorTiles(ArmyBuyHandler.freeSurroudingTiles);
                     ArmyBuyHandler.provinceTilesColored = false;
                 }
                 

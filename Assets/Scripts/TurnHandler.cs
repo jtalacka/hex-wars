@@ -17,6 +17,8 @@ public class TurnHandler : MonoBehaviour
     {
         Players.players = CreatePlayers(2);
         AssignProvince();
+        Players.players[0].color = Color.red;
+        Players.players[1].color = Color.yellow;
         Players.currentPlayer = Players.players[0];
         Debug.Log("Start Player id: " + Players.currentPlayer.id);
         GoToNextPlayer();

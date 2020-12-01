@@ -22,6 +22,7 @@ public class Battle : MonoBehaviour
     private Army retreat;
     public WorldTile retreatTile;
     public WorldTile initialTile;
+    public AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +45,8 @@ public class Battle : MonoBehaviour
         attacker_quantity.text = attacker.quantity.ToString();
         defender_quantity.text = defender.quantity.ToString();
         timeleft.text = timeRemaining.ToString();
-
+        audio.loop=true;
+        audio.Play();
 
     }
 
@@ -56,6 +58,7 @@ public class Battle : MonoBehaviour
             CancelInvoke();
             Destroy(attacker);
             panel.SetActive(false);
+            audio.Stop();
             Destroy(this.GetComponent("Battle"));
             Destroy(this.gameObject);
 
@@ -70,6 +73,7 @@ public class Battle : MonoBehaviour
                     Destroy(go.gameObject);
                 }
             }
+            audio.Stop();
             Destroy(this.GetComponent("Battle"));
             Destroy(defender);
 
@@ -106,6 +110,7 @@ public class Battle : MonoBehaviour
                 initialTile.army = null;
                 retreatTile.army = retreat;
                 panel.SetActive(false);
+                audio.Stop();
                 Destroy(this.GetComponent("Battle"));
             }
 
@@ -142,6 +147,7 @@ public class Battle : MonoBehaviour
             else
             {
                 panel.SetActive(false);
+                audio.Stop();
                 Destroy(this.GetComponent("Battle"));
             }
         }

@@ -118,7 +118,7 @@ public class TurnHandler : MonoBehaviour
         var apph1 = provinceObject1.GetComponent<ArmyPurchasePanelHandler>();
         Province province1 = apph1.province;
         Players.players[1].provinces.Add(province1);
-        province.player = Players.players[1];
+        province1.player = Players.players[1];
     }
 
 

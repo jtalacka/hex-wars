@@ -24,4 +24,6 @@ public class WorldTile
 
     public int Cost { get; set; }
 
+    public Province Province { get; set; }
+
 }

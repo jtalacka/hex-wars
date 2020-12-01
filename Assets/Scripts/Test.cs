@@ -142,24 +142,25 @@ public class Test : MonoBehaviour
             else
             {
                 var tiles = GameTiles.instance.tiles;
+                CheckForProvinceOccupation();
                 Players.currentPlayer.armies.ForEach(armies =>
+                {
+                    if (armies != this.army)
                     {
                         if (armies != this.army&&this.army!=null)
                         {
-                            if (armies.positionInGrid == this.army.positionInGrid&&this.army.Type==armies.Type)
+                            if (tiles.TryGetValue(army.positionInGrid, out _tile))
                             {
-                                if (tiles.TryGetValue(army.positionInGrid, out _tile))
-                                {
-                                        _tile.army = armies;
-                                        _tile.army.quantity += army.quantity;
-                                        Destroy(this.gameObject);
-                                }
-
+                                    _tile.army = armies;
+                                    _tile.army.quantity += army.quantity;
+                                    Destroy(this.gameObject);
                             }
 
                         }
 
-                    });
+                    }
+
+                });
 
                 moving = false;
                 objectPressed = false;
@@ -242,6 +243,48 @@ public class Test : MonoBehaviour
             }
         }
 
+    }
+
+    private void CheckForProvinceOccupation()
+    {
+        var tiles = GameTiles.instance.tiles;
+        var end_tile_position = this.army.positionInGrid;
+        WorldTile surroundingTile;
+        var coords = DirectionCalculator.instance.getSurroundingCoordinates(end_tile_position);
+        foreach (var coordinate in coords)
+        {
+            if (tiles.TryGetValue(locationInGrid(coordinate), out surroundingTile) &&
+            (surroundingTile.Province != null) && (surroundingTile.Province.center == surroundingTile.LocalPlace))
+            {
+                bool enemyFound = false;
+                var centerSurroundingTiles = DirectionCalculator.instance.getSurroundingCoordinates(surroundingTile.Province.center);
+                WorldTile centerSurroundingWorldTile = null;
+                foreach (var centerSurroundingTile in centerSurroundingTiles)
+                {
+                    if (tiles.TryGetValue(locationInGrid(centerSurroundingTile), out centerSurroundingWorldTile) && 
+                        (centerSurroundingWorldTile.army != null ) && (centerSurroundingWorldTile.army.player.id != Players.currentPlayer.id))
+                           
+                    {
+                        enemyFound = true;
+                        break;
+                    }
+                }
+                if (!enemyFound)
+                {
+                    foreach(var player in Players.players)
+                    {
+                        if (player.provinces.Contains(surroundingTile.Province))
+                        {
+                            player.provinces.Remove(surroundingTile.Province);
+                            break;
+                        }
+                    }
+                    surroundingTile.Province.player = Players.currentPlayer;
+                    Players.currentPlayer.provinces.Add(surroundingTile.Province);
+                }
+                break;
+            }
+        }
     }
     private void resetColorFromSelected(int begining,int end)
     {

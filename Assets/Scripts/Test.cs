@@ -147,7 +147,7 @@ public class Test : MonoBehaviour
                 {
                     if (armies != this.army)
                     {
-                        if (armies != this.army && this.army != null)
+                        if (armies != this.army&&this.army!=null)
                         {
                             if (tiles.TryGetValue(army.positionInGrid, out _tile))
                             {

@@ -54,6 +54,7 @@ public class Battle : MonoBehaviour
         if (attacker.quantity <= 0)
         {
             CancelInvoke();
+            Players.currentPlayer.armies.Remove(attacker);
             Destroy(attacker);
             panel.SetActive(false);
             Destroy(this.GetComponent("Battle"));
@@ -71,6 +72,7 @@ public class Battle : MonoBehaviour
                 }
             }
             Destroy(this.GetComponent("Battle"));
+            defender.player.armies.Remove(defender);
             Destroy(defender);
 
             panel.SetActive(false);

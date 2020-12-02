@@ -9,6 +9,9 @@ public class TurnHandler : MonoBehaviour
     public Text supplyText;
     public Text incomeText;
     public Text playerIdText;
+    public GameObject lossPanel;
+    public GameObject winPanel;
+
     private int currentPlayerIndex = -1;
     private int income = 0;
     
@@ -30,6 +33,8 @@ public class TurnHandler : MonoBehaviour
         Debug.Log(currentPlayerIndex);
         RestoreArmyMovement();
         GoToNextPlayer();
+        CheckForLoss();
+        CheckForWin();
         CalculateIncome();
         CalculateSupply();
         ShowPlayerInfo();
@@ -119,6 +124,49 @@ public class TurnHandler : MonoBehaviour
         Province province1 = apph1.province;
         Players.players[1].provinces.Add(province1);
         province1.player = Players.players[1];
+    }
+
+    private void CheckForLoss()
+    {
+        if(Players.losserId > -1)
+        {
+            var losser = Players.players[Players.losserId];
+            Players.players.Remove(losser);
+            Players.losserId = -1;
+        }
+        
+        var player = Players.currentPlayer;
+        Debug.Log(player.id + " provinces count: " + player.provinces.Count + " armies count: " + player.armies.Count);
+        if((player.provinces.Count == 0) && (player.armies.Count == 0))
+        {
+            Players.losserId = Players.currentPlayer.id;
+            if(lossPanel != null)
+            {
+                lossPanel.SetActive(true);
+            }
+        }
+        else
+        {
+            if (lossPanel != null)
+            {
+                lossPanel.SetActive(false);
+            }
+        }
+    }
+    private void CheckForWin()
+    {
+        if (Players.winnerFound)
+        {
+            // change scene into menu
+        }
+        if(Players.players.Count == 1)
+        {
+            if(winPanel != null)
+            {
+                winPanel.SetActive(true);
+            }
+            Players.winnerFound = true;
+        }
     }
 
 

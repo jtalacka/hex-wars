@@ -9,7 +9,7 @@ public class Battle : MonoBehaviour
     public Army attacker;
     public Army defender;
     public float speed;
-    public float time = 20f;
+    public float time = 5f;
     private float timeRemaining;
     private GameObject panel;
     private Text attacker_player;
@@ -86,10 +86,10 @@ public class Battle : MonoBehaviour
         }
 
         //print(retreatTile);
-        if (retreat != null&&retreatTile!=null)
+        if (retreat != null && retreatTile != null)
 
         {
-            Transform trans=null;
+            Transform trans = null;
             foreach (var go in GameObject.FindGameObjectsWithTag("army") as GameObject[])
             {
                 if (go.GetComponent<Test>().army == retreat)
@@ -120,6 +120,29 @@ public class Battle : MonoBehaviour
                 Destroy(this.GetComponent("Battle"));
             }
 
+        }
+        else if(retreat!=null)
+        {
+            print("helpo");
+            if (retreat == attacker)
+                {
+                CancelInvoke();
+                Destroy(this.GetComponent("Battle"));
+                    Destroy(this.gameObject);
+
+                }
+                else if(retreat==defender)
+                {
+                CancelInvoke();
+                foreach (var go in GameObject.FindGameObjectsWithTag("army") as GameObject[])
+                {
+                    if (go.GetComponent<Test>().army == defender)
+                    {
+                        Destroy(go.gameObject);
+                    }
+                }
+                Destroy(this.GetComponent("Battle"));
+                }
         }
 
     }

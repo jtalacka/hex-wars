@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -74,10 +75,17 @@ public class Battle : MonoBehaviour
                 if (go.GetComponent<Test>().army == defender)
                 {
                     Destroy(go.gameObject);
+                    break;
                 }
             }
             audio.Stop();
             GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = true;
+            if (Tutorial.tutorial)
+            {
+                GameObject go = GameObject.Find("Tutorial-text").gameObject;
+                go.GetComponent<TMP_Text>().text = "Occupy enemy province to increase your suply, for this tutorial, to win the game";
+                Tutorial.tutorialCount++;
+            }
             Destroy(this.GetComponent("Battle"));
             defender.player.armies.Remove(defender);
             Destroy(defender);

@@ -32,7 +32,7 @@ public class TurnHandler : MonoBehaviour
             CreateArmyToTotorialEnemy(Players.players[1], new Vector3Int(1, 14, 0), armyForTutorialEnemy, "Infantry");
         }
         AssignProvince();
-        Players.players[0].color = new Color(1, 0.26f, 0, 1);
+        Players.players[0].color = Color.red;
         Players.players[1].color = new Color(1, 0.69f, 0, 1);
         Players.currentPlayer = Players.players[0];
         Debug.Log("Start Player id: " + Players.currentPlayer.id);
@@ -190,6 +190,7 @@ public class TurnHandler : MonoBehaviour
     }
     private void CheckForWin()
     {
+
         if (Players.winnerFound)
         {
             this.gameObject.GetComponent<SwitchScene>().switchScene();
@@ -202,6 +203,20 @@ public class TurnHandler : MonoBehaviour
                 winPanel.SetActive(true);
             }
             Players.winnerFound = true;
+        }
+        if (Tutorial.tutorial)
+        {
+            var player = Players.players[1];
+            Debug.Log(player.id + " provinces count: " + player.provinces.Count + " armies count: " + player.armies.Count);
+            if ((player.provinces.Count == 0) && (player.armies.Count == 0))
+            {
+                if (winPanel != null)
+                {
+                    winPanel.SetActive(true);
+                }
+                Players.winnerFound = true;
+
+            }
         }
     }
 
@@ -233,6 +248,7 @@ public class TurnHandler : MonoBehaviour
                 ArmyFactory.InstantiateArmy(newArmyCoin, position);
                 army.positionInGrid = _tile.LocalPlace;
                 army.player = player;
+                army.quantity = 10;
                 player.armies.Add(army);
                 _tile.army = army;
             }

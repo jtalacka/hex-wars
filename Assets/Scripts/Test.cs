@@ -28,6 +28,10 @@ public class Test : MonoBehaviour
         var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
         tilemap.Add(map);
         this.gameObject.GetComponent<SpriteRenderer>().color = Players.currentPlayer.color;
+        if (Tutorial.tutorial&&army.player==null)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().color = Players.players[1].color;
+        }
 
 
         if (tiles.TryGetValue(locationInGrid(transform.position), out _tile))
@@ -172,7 +176,7 @@ public class Test : MonoBehaviour
                                     _tile.army.quantity += army.quantity;
                                     _tile.army.movementLeft = (_tile.army.movementLeft + this.army.movementLeft) / 2;
                                     Players.currentPlayer.armies.Remove(this.army);
-                                    if (Tutorial.tutorial && Tutorial.tutorialCount == 5)
+                                    if (Tutorial.tutorial)
                                     {
                                         GameObject go = GameObject.Find("Tutorial-text").gameObject;
                                         go.GetComponent<TMP_Text>().text = "Move your army near the enemy player to attack him. If you're out of movement or want to get more Money from your provinces press, End Turn";
@@ -188,7 +192,7 @@ public class Test : MonoBehaviour
 
                     }
                 });
-                if (Tutorial.tutorial && Tutorial.tutorialCount == 4)
+                if (Tutorial.tutorial && Tutorial.tutorialCount <= 4)
                 {
                     GameObject go = GameObject.Find("Tutorial-text").gameObject;
                     go.GetComponent<TMP_Text>().text = "Create another army of the same type,place it and try to move it on top of your previously created army to join them. Their quantity will add up";
@@ -335,6 +339,12 @@ public class Test : MonoBehaviour
                     surroundingTile.Province.player = Players.currentPlayer;
                     Players.currentPlayer.provinces.Add(surroundingTile.Province);
                     TileColorHandler.ColorTiles(surroundingTile.Province.teritories, Players.currentPlayer.color);
+                    if (Tutorial.tutorial)
+                    {
+                        GameObject go = GameObject.Find("Tutorial-text").gameObject;
+                        go.GetComponent<TMP_Text>().text = "You finished the tutorial. Win condition is if other players don't have any armies or provinces anymore. Press end turn to see win screen, press it again to go back to main screen";
+                        Tutorial.tutorialCount++;
+                    }
                 }
                 break;
             }

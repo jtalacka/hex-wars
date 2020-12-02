@@ -51,9 +51,9 @@ public class PlayerSelection : MonoBehaviour
                 go.transform.SetParent(GameObject.Find("Players").transform);
                 go.transform.position = GameObject.Find("Players").transform.position;
                 go.transform.localScale = new Vector3(1, 1, 1);
-                go.transform.position = new Vector3(go.transform.position.x, -i, go.transform.position.z);
+                go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y-200f- i*70f, go.transform.position.z);
                 go.transform.GetChild(1).gameObject.GetComponent<TMP_Text>().text = provinces[i];
-                go.transform.GetChild(2).gameObject.GetComponent<MeshRenderer>().material.color = colors[i];
+                go.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().color = colors[i];
                 go.transform.GetChild(0).gameObject.GetComponent<TMP_InputField>().text = "Player-" + i.ToString();
             }
             button.interactable = true;

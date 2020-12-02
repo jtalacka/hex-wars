@@ -159,6 +159,7 @@ public class TurnHandler : MonoBehaviour
     {
         if (Players.winnerFound)
         {
+            this.gameObject.GetComponent<SwitchScene>().switchScene();
             // change scene into menu
         }
         if(Players.players.Count == 1)

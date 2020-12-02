@@ -44,7 +44,7 @@ public class ArmyBuyHandler : MonoBehaviour
                     freeSurroudingTiles.Add(_tile.LocalPlace);
                 }
             });
-            TileColorHandler.ColorTiles(freeSurroudingTiles, Color.red);
+            TileColorHandler.ColorTiles(freeSurroudingTiles, Color.black);
             provinceTilesColored = true;
 
             if (Tutorial.tutorial && Tutorial.tutorialCount == 1)
@@ -70,7 +70,7 @@ public class ArmyBuyHandler : MonoBehaviour
                 {
                     if (freeSurroudingTiles.Contains(tile.LocalPlace))
                     {
-                        TileColorHandler.RecolorTiles(freeSurroudingTiles);
+                        TileColorHandler.ColorTiles(freeSurroudingTiles, Players.currentPlayer.color);
                         freeSurroudingTiles.Clear();
                         provinceTilesColored = false;
                         PlaceNewArmy(tile);

@@ -14,7 +14,6 @@ public class TileColorHandler : MonoBehaviour
             if (worldTiles.TryGetValue(position, out _tile))
             {
                 _tile.TilemapMember.SetTileFlags(_tile.LocalPlace, TileFlags.None);
-                color.a = 0.5f;
                 _tile.TilemapMember.SetColor(_tile.LocalPlace, color);
             }
         }

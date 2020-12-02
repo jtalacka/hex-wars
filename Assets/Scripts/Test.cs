@@ -208,6 +208,7 @@ public class Test : MonoBehaviour
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
                     tempTile=tile[0];
                     tile.RemoveAt(0);
+                    GameObject.Find("MovementAudio").GetComponent<AudioSource>().Play();
                 }
             }
 

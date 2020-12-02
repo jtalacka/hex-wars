@@ -20,6 +20,7 @@ public class ArmyBuyHandler : MonoBehaviour
     public GameObject newInfantryCoin;
     public GameObject newTankCoin;
     public GameObject newPlaneCoin;
+
     public void BuyArmy()
     {
         var tiles = GameTiles.instance.tiles;

@@ -12,6 +12,7 @@ public class TurnHandler : MonoBehaviour
     public Text playerIdText;
     public GameObject lossPanel;
     public GameObject winPanel;
+    public GameObject armyForTutorialEnemy;
 
     private int currentPlayerIndex = -1;
     private int income = 0;
@@ -28,6 +29,7 @@ public class TurnHandler : MonoBehaviour
         {
             this.GetComponent<Button>().interactable = false;
             Players.players = CreatePlayers(2, 1000);
+            CreateArmyToTotorialEnemy(Players.players[1], new Vector3Int(1, 14, 0), armyForTutorialEnemy, "Infantry");
         }
         AssignProvince();
         Players.players[0].color = new Color(1, 0.26f, 0, 1);
@@ -213,6 +215,26 @@ public class TurnHandler : MonoBehaviour
             {
                 tiles.TryGetValue(territory, out _tile);
                 _tile.Province = province;
+            }
+        }
+    }
+
+    private void CreateArmyToTotorialEnemy(Player player, Vector3Int tilePosition, GameObject newArmyCoin, string type)
+    {
+        var tiles = GameTiles.instance.tiles;
+        WorldTile _tile;
+        if (tiles.TryGetValue(tilePosition, out _tile))
+        {
+            var position = _tile.WorldLocation;
+            var army = ArmyFactory.GetArmyTemplate(type);
+            if (newArmyCoin != null)
+            {
+
+                ArmyFactory.InstantiateArmy(newArmyCoin, position);
+                army.positionInGrid = _tile.LocalPlace;
+                army.player = player;
+                player.armies.Add(army);
+                _tile.army = army;
             }
         }
     }

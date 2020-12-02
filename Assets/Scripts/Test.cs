@@ -169,6 +169,7 @@ public class Test : MonoBehaviour
                                         go.GetComponent<TMP_Text>().text = "Move your army near the enemy player to attack him. If you're out of movement or want to get more Money from your provinces press, End Turn";
                                         Tutorial.tutorialCount++;
                                     }
+                                    GameObject.Find("MovementAudio").GetComponent<AudioSource>().Stop();
                                     Destroy(this.gameObject);
                                 }
 

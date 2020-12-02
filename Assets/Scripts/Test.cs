@@ -16,6 +16,7 @@ public class Test : MonoBehaviour
     private WorldTile tempTile;
     private Army enemyArmy;
     private bool merge=false;
+    public AudioSource battleSound;
     // Update is called once per frame
     List<Tilemap> tilemap;
     private void Start()
@@ -24,6 +25,7 @@ public class Test : MonoBehaviour
         var map = GameTiles.instance.tilemap[0];
         var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
         tilemap.Add(map);
+        this.gameObject.GetComponent<SpriteRenderer>().color = Players.currentPlayer.color;
 
 
         if (tiles.TryGetValue(locationInGrid(transform.position), out _tile))
@@ -133,6 +135,7 @@ public class Test : MonoBehaviour
                         this.GetComponent<Battle>().attacker = army;
                         this.GetComponent<Battle>().defender = enemyArmy;
                         this.GetComponent<Battle>().speed = speed;
+                        this.GetComponent<Battle>().audio = battleSound;
                         enemyArmy = null;
                         enemy = false;
 
@@ -141,6 +144,7 @@ public class Test : MonoBehaviour
             }
             else
             {
+                print("move test");
                 var tiles = GameTiles.instance.tiles;
                 CheckForProvinceOccupation();
                 Players.currentPlayer.armies.ForEach(armies =>

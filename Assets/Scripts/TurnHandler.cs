@@ -15,8 +15,10 @@ public class TurnHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Players.players = CreatePlayers(2);
+        Players.players = CreatePlayers(PlayerSelection.players.Count,PlayerSelection.startingMoney);
         AssignProvince();
+        Players.players[0].color = Color.red;
+        Players.players[1].color = Color.yellow;
         Players.currentPlayer = Players.players[0];
         Debug.Log("Start Player id: " + Players.currentPlayer.id);
         GoToNextPlayer();
@@ -88,7 +90,7 @@ public class TurnHandler : MonoBehaviour
         playerIdText.text = "Player nr.: " + Players.currentPlayer.id;
     }
 
-    private List<Player> CreatePlayers(int count)
+    private List<Player> CreatePlayers(int count,int startingMoney)
     {
         List<Player> players = new List<Player>();
         Player player;
@@ -98,7 +100,7 @@ public class TurnHandler : MonoBehaviour
             {
                 id = i,
                 supply = 0,
-                money = 1000,
+                money = startingMoney,
                 province_nr = 1
             };
             players.Add(player);

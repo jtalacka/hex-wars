@@ -238,8 +238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
-  m_SizeDelta: {x: 200, y: 203.57399}
+  m_AnchoredPosition: {x: 4.5, y: 0.000030517578}
+  m_SizeDelta: {x: 685.4935, y: 203.57399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &478431528
 MonoBehaviour:
@@ -260,29 +260,69 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'test: something
+  m_text: 'Creators:
 
-    test: something
+    Julius Talacka
 
-    test: something
+    Lukas Baltramaitis
 
-    test: something
 
-    test:
-    something
+    Sounds:
 
-    test: something
 
-    test: something
+    Button
+    pressed:
 
-    test: something
+    https://freesound.org/people/Sheyvan/sounds/494495/
 
-    test:
-    something
 
-    test: something
+    Infantry
+    movement:
 
-    test: something'
+    https://freesound.org/people/WebbFilmsUK/sounds/200321/
+
+
+    Tank
+    movement:
+
+    https://freesound.org/people/nicStage/sounds/368671/
+
+
+    Plane
+    movement:
+
+    https://freesound.org/people/debsound/sounds/117270/
+
+
+    Battle:
+
+    https://www.freesoundeffects.com/free-track/battle-1-466470/
+
+
+    Icons:
+
+
+    Infantry
+    icon:
+
+    https://vectorified.com/download-image#infantry-icon-7.png
+
+
+    Tank
+    icon:
+
+    https://www.freepik.com/free-icon/tank_871663.htm
+
+
+    Plane icon:
+
+    https://media.istockphoto.com/vectors/world-war-ii-republic-p47-thunderbolt-vector-id684478936?b=1&k=6&m=684478936&s=612x612&w=0&h=qZf-BtKzd8nY8u3UIddODyHAHloQ-XTPnpEAETPGyiU=
+
+
+    Province
+    icon:
+
+    https://icons.iconarchive.com/icons/icons8/windows-8/512/City-Embassy-icon.png'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -327,7 +367,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 32
+  m_firstOverflowCharacterIndex: 45
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -348,15 +388,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -5.0161047, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 478431528}
-    characterCount: 175
+    characterCount: 835
     spriteCount: 0
-    spaceCount: 21
-    wordCount: 22
+    spaceCount: 43
+    wordCount: 100
     linkCount: 0
-    lineCount: 22
+    lineCount: 47
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

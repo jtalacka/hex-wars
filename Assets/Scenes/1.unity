@@ -75574,10 +75574,7 @@ MonoBehaviour:
   playerIdText: {fileID: 0}
   lossPanel: {fileID: 0}
   winPanel: {fileID: 0}
-<<<<<<< HEAD
-=======
   armyForTutorialEnemy: {fileID: 0}
->>>>>>> c6ceccd3d724f1d2bcf60e84c13128edded7bbd3
   tutorial: 0
 --- !u!114 &1211421697
 MonoBehaviour:

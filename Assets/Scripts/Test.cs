@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -151,21 +152,38 @@ public class Test : MonoBehaviour
                 {
                     if (armies != this.army)
                     {
-                        if (armies != this.army&&this.army!=null)
+                        if (armies != this.army && this.army != null)
                         {
-                            if (tiles.TryGetValue(army.positionInGrid, out _tile))
+                            if (armies.positionInGrid == this.army.positionInGrid && this.army.Type == armies.Type)
                             {
+                                if (tiles.TryGetValue(army.positionInGrid, out _tile))
+                                {
                                     _tile.army = armies;
                                     _tile.army.quantity += army.quantity;
+                                    _tile.army.movementLeft = (_tile.army.movementLeft + this.army.movementLeft) / 2;
+                                    Players.currentPlayer.armies.Remove(this.army);
+                                    if (Tutorial.tutorial && Tutorial.tutorialCount == 5)
+                                    {
+                                        GameObject go = GameObject.Find("Tutorial-text").gameObject;
+                                        go.GetComponent<TMP_Text>().text = "Move your army near the enemy player to attack him. If you're out of movement or want to get more Money from your provinces press, End Turn";
+                                        Tutorial.tutorialCount++;
+                                    }
                                     Destroy(this.gameObject);
+                                }
+
                             }
 
                         }
 
                     }
-
                 });
-
+                if (Tutorial.tutorial && Tutorial.tutorialCount == 4)
+                {
+                    GameObject go = GameObject.Find("Tutorial-text").gameObject;
+                    go.GetComponent<TMP_Text>().text = "Create another army of the same type,place it and try to move it on top of your previously created army to join them. Their quantity will add up";
+                    Tutorial.tutorialCount++;
+                }
+                GameObject.Find("MovementAudio").GetComponent<AudioSource>().Stop();
                 moving = false;
                 objectPressed = false;
                 objectPressed = false;
@@ -199,6 +217,14 @@ public class Test : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)&&army.player.id==Players.currentPlayer.id)
         {
+            GameObject.Find("MovementAudio").GetComponent<AudioSource>().clip = army.audio;
+            if (Tutorial.tutorial&&Tutorial.tutorialCount==3)
+            {
+                GameObject go = GameObject.Find("Tutorial-text").gameObject;
+                go.GetComponent<TMP_Text>().text = "Drag your mouse to create a path for your army to move and click left mouse button.\n On the bottom left you can see information about your current army";
+                Tutorial.tutorialCount++;
+            }
+
             bool otherArmyPressed = false;
             foreach (var go in GameObject.FindGameObjectsWithTag("army") as GameObject[])
             {

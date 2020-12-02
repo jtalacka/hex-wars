@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,11 +15,20 @@ public class TurnHandler : MonoBehaviour
 
     private int currentPlayerIndex = -1;
     private int income = 0;
+    public bool tutorial = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        Players.players = CreatePlayers(PlayerSelection.players.Count,PlayerSelection.startingMoney);
+        if (!Tutorial.tutorial)
+        {
+            Players.players = CreatePlayers(PlayerSelection.players.Count, PlayerSelection.startingMoney);
+        }
+        else
+        {
+            this.GetComponent<Button>().interactable = false;
+            Players.players = CreatePlayers(2, 1000);
+        }
         AssignProvince();
         Players.players[0].color = Color.red;
         Players.players[1].color = Color.yellow;
@@ -28,6 +38,14 @@ public class TurnHandler : MonoBehaviour
         CalculateIncome();
         CalculateSupply();
         ShowPlayerInfo();
+    }
+    public void Update()
+    {
+        if (Tutorial.tutorial && Tutorial.tutorialCount == 6)
+            {
+            this.GetComponent<Button>().interactable = true;
+            Tutorial.tutorialCount++;
+            }
     }
 
     public void EndTurn()
@@ -59,6 +77,12 @@ public class TurnHandler : MonoBehaviour
         if (Players.players.Count - 1 > currentPlayerIndex)
         {
             currentPlayerIndex++;
+
+            if (Tutorial.tutorial)
+            {
+                currentPlayerIndex = 0;
+            }
+
             Players.currentPlayer = Players.players[currentPlayerIndex];
             
         }
@@ -69,6 +93,8 @@ public class TurnHandler : MonoBehaviour
         }
         Debug.Log(currentPlayerIndex);
         Debug.Log("Army count: " + Players.currentPlayer.armies.Count);
+
+
     }
 
     private void CalculateIncome()

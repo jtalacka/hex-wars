@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 public class Army : ScriptableObject
 {
     public string Type;
+    public AudioClip audio;
     public List<int> TileMaps=new List<int>();
     public Vector3Int positionInGrid;
     public Player player;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ArmyPurchasePanelHandler : MonoBehaviour
 {
@@ -17,6 +18,13 @@ public class ArmyPurchasePanelHandler : MonoBehaviour
         {
             if (panel != null)
             {
+                if (Tutorial.tutorial&&Tutorial.tutorialCount==0)
+                {
+                    GameObject go = GameObject.Find("Tutorial-text").gameObject;
+                    go.GetComponent<TMP_Text>().text = "Select an army type, quantity and press buy";
+                    Tutorial.tutorialCount++;
+                }
+
                 panelInstance = panel;
                 bool isActive = panel.activeSelf;
                 panel.SetActive(!isActive);

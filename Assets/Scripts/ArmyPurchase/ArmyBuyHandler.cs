@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
@@ -45,6 +46,13 @@ public class ArmyBuyHandler : MonoBehaviour
             });
             TileColorHandler.ColorTiles(freeSurroudingTiles, Color.red);
             provinceTilesColored = true;
+
+            if (Tutorial.tutorial && Tutorial.tutorialCount == 1)
+            {
+                GameObject go = GameObject.Find("Tutorial-text").gameObject;
+                go.GetComponent<TMP_Text>().text = "Put your created army on one of the available spots";
+                Tutorial.tutorialCount++;
+            }
         }
     }
 
@@ -122,7 +130,13 @@ public class ArmyBuyHandler : MonoBehaviour
                 ArmyPurchasePanelHandler.panelInstance.SetActive(false);
             }
         }
-        
+        if (Tutorial.tutorial&&Tutorial.tutorialCount==2)
+        {
+            GameObject go = GameObject.Find("Tutorial-text").gameObject;
+            go.GetComponent<TMP_Text>().text = "Press on your newly created army to begin moving";
+            Tutorial.tutorialCount++;
+        }
+
     }
 
     

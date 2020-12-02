@@ -147,17 +147,20 @@ public class Test : MonoBehaviour
             {
                 print("move test");
                 var tiles = GameTiles.instance.tiles;
+                CheckForProvinceOccupation();
                 Players.currentPlayer.armies.ForEach(armies =>
+                {
+                    if (armies != this.army)
                     {
-                        if (armies != this.army&&this.army!=null)
+                        if (armies != this.army && this.army != null)
                         {
-                            if (armies.positionInGrid == this.army.positionInGrid&&this.army.Type==armies.Type)
+                            if (armies.positionInGrid == this.army.positionInGrid && this.army.Type == armies.Type)
                             {
                                 if (tiles.TryGetValue(army.positionInGrid, out _tile))
                                 {
-                                        _tile.army = armies;
-                                        _tile.army.quantity += army.quantity;
-                                        _tile.army.movementLeft = (_tile.army.movementLeft + this.army.movementLeft) / 2;
+                                    _tile.army = armies;
+                                    _tile.army.quantity += army.quantity;
+                                    _tile.army.movementLeft = (_tile.army.movementLeft + this.army.movementLeft) / 2;
                                     Players.currentPlayer.armies.Remove(this.army);
                                     if (Tutorial.tutorial && Tutorial.tutorialCount == 5)
                                     {
@@ -172,7 +175,8 @@ public class Test : MonoBehaviour
 
                         }
 
-                    });
+                    }
+                });
                 if (Tutorial.tutorial && Tutorial.tutorialCount == 4)
                 {
                     GameObject go = GameObject.Find("Tutorial-text").gameObject;
@@ -190,7 +194,6 @@ public class Test : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
            // print("testMOve");
             var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
             Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -205,7 +208,6 @@ public class Test : MonoBehaviour
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
                     tempTile=tile[0];
                     tile.RemoveAt(0);
-                    GameObject.Find("MovementAudio").GetComponent<AudioSource>().Play();
                 }
             }
 
@@ -271,6 +273,48 @@ public class Test : MonoBehaviour
             }
         }
 
+    }
+
+    private void CheckForProvinceOccupation()
+    {
+        var tiles = GameTiles.instance.tiles;
+        var end_tile_position = this.army.positionInGrid;
+        WorldTile surroundingTile;
+        var coords = DirectionCalculator.instance.getSurroundingCoordinates(end_tile_position);
+        foreach (var coordinate in coords)
+        {
+            if (tiles.TryGetValue(locationInGrid(coordinate), out surroundingTile) &&
+            (surroundingTile.Province != null) && (surroundingTile.Province.center == surroundingTile.LocalPlace))
+            {
+                bool enemyFound = false;
+                var centerSurroundingTiles = DirectionCalculator.instance.getSurroundingCoordinates(surroundingTile.Province.center);
+                WorldTile centerSurroundingWorldTile = null;
+                foreach (var centerSurroundingTile in centerSurroundingTiles)
+                {
+                    if (tiles.TryGetValue(locationInGrid(centerSurroundingTile), out centerSurroundingWorldTile) && 
+                        (centerSurroundingWorldTile.army != null ) && (centerSurroundingWorldTile.army.player.id != Players.currentPlayer.id))
+                           
+                    {
+                        enemyFound = true;
+                        break;
+                    }
+                }
+                if (!enemyFound)
+                {
+                    foreach(var player in Players.players)
+                    {
+                        if (player.provinces.Contains(surroundingTile.Province))
+                        {
+                            player.provinces.Remove(surroundingTile.Province);
+                            break;
+                        }
+                    }
+                    surroundingTile.Province.player = Players.currentPlayer;
+                    Players.currentPlayer.provinces.Add(surroundingTile.Province);
+                }
+                break;
+            }
+        }
     }
     private void resetColorFromSelected(int begining,int end)
     {

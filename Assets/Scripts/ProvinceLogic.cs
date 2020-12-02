@@ -58,6 +58,7 @@ public class ProvinceLogic : MonoBehaviour
                             color.a = 0.5f;
                             _tile.TilemapMember.SetColor(_tile.LocalPlace, color);
                             province.teritories.Add(_tile.LocalPlace);
+                            _tile.Province = province;
                         }
                     }
                     else
@@ -66,6 +67,7 @@ public class ProvinceLogic : MonoBehaviour
                         {
                             _tile.TilemapMember.SetColor(current, new Color(1, 1, 1, 1));
                             province.teritories.RemoveAt(province.teritories.FindIndex(t=>t==current));
+                            _tile.Province = null;
                         }
                     }
                 }
@@ -107,6 +109,7 @@ public class ProvinceLogic : MonoBehaviour
                     print(_tile.TilemapMember.color);
                     _tile.TilemapMember.SetColor(_tile.LocalPlace, color);
                     province.center=_tile.LocalPlace;
+                    _tile.Province = province;
                 }
 
                 objectPressed = true;

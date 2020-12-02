@@ -43,6 +43,7 @@ public class ArmyPurchasePanelHandler : MonoBehaviour
                 if (ArmyBuyHandler.provinceTilesColored)
                 {
                     TileColorHandler.RecolorTiles(ArmyBuyHandler.freeSurroudingTiles);
+                    ArmyBuyHandler.freeSurroudingTiles.Clear();
                     ArmyBuyHandler.provinceTilesColored = false;
                 }
                 

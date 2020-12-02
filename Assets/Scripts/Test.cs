@@ -125,8 +125,17 @@ public class Test : MonoBehaviour
                 }
                 else
                 {
+                    Color color;
                     tempTile.army = null;
-                    tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
+                    if ((tile[0].Province != null) && (tile[0].Province.player.id != null))
+                    {
+                        color = tile[0].Province.player.color;
+                    }
+                    else
+                    {
+                        color = new Color(1, 1, 1, 1);
+                    }
+                    tile[0].TilemapMember.SetColor(tile[0].LocalPlace, color);
                     tempTile = tile[0];
                     tile.RemoveAt(0);
                     army.movementLeft -= 1;
@@ -209,7 +218,16 @@ public class Test : MonoBehaviour
                     resetColorFromSelected(index + 1, tile.Count - 1);
                     moving = true;
                     GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = false;
-                    tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
+                    Color color;
+                    if((tile[0].Province != null) && (tile[0].Province.player.id != null))
+                    {
+                        color = tile[0].Province.player.color;
+                    }
+                    else
+                    {
+                        color = new Color(1, 1, 1, 1);
+                    }
+                    tile[0].TilemapMember.SetColor(tile[0].LocalPlace, color);
                     tempTile=tile[0];
                     tile.RemoveAt(0);
                     GameObject.Find("MovementAudio").GetComponent<AudioSource>().Play();
@@ -316,6 +334,7 @@ public class Test : MonoBehaviour
                     }
                     surroundingTile.Province.player = Players.currentPlayer;
                     Players.currentPlayer.provinces.Add(surroundingTile.Province);
+                    TileColorHandler.ColorTiles(surroundingTile.Province.teritories, Players.currentPlayer.color);
                 }
                 break;
             }
@@ -323,9 +342,20 @@ public class Test : MonoBehaviour
     }
     private void resetColorFromSelected(int begining,int end)
     {
+
         for (int i = end; i >= begining; i--)
         {
-            tile[i].TilemapMember.SetColor(tile[i].LocalPlace, new Color(1, 1, 1, 1));
+            Color color;
+            var province = tile[i].Province;
+            if((province != null) && (province.player.id != null))
+            {
+                color = province.player.color;
+            }
+            else
+            {
+                color = new Color(1, 1, 1, 1);
+            }
+            tile[i].TilemapMember.SetColor(tile[i].LocalPlace, color);
             tile.RemoveAt(i);
         }
     }

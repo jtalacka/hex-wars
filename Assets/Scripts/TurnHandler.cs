@@ -12,6 +12,7 @@ public class TurnHandler : MonoBehaviour
     public Text playerIdText;
     public GameObject lossPanel;
     public GameObject winPanel;
+    public GameObject armyForTutorialEnemy;
 
     private int currentPlayerIndex = -1;
     private int income = 0;
@@ -28,12 +29,14 @@ public class TurnHandler : MonoBehaviour
         {
             this.GetComponent<Button>().interactable = false;
             Players.players = CreatePlayers(2, 1000);
+            CreateArmyToTotorialEnemy(Players.players[1], new Vector3Int(1, 14, 0), armyForTutorialEnemy, "Infantry");
         }
         AssignProvince();
-        Players.players[0].color = Color.red;
-        Players.players[1].color = Color.yellow;
+        Players.players[0].color = new Color(1, 0.26f, 0, 1);
+        Players.players[1].color = new Color(1, 0.69f, 0, 1);
         Players.currentPlayer = Players.players[0];
         Debug.Log("Start Player id: " + Players.currentPlayer.id);
+        ColorProvinces.ColorAllProvinces();
         GoToNextPlayer();
         CalculateIncome();
         CalculateSupply();
@@ -152,6 +155,10 @@ public class TurnHandler : MonoBehaviour
         Province province1 = apph1.province;
         Players.players[1].provinces.Add(province1);
         province1.player = Players.players[1];
+        List<Province> provinces = new List<Province>();
+        provinces.Add(province);
+        provinces.Add(province1);
+        SetAllProvinces(provinces);
     }
 
     private void CheckForLoss()
@@ -195,6 +202,40 @@ public class TurnHandler : MonoBehaviour
                 winPanel.SetActive(true);
             }
             Players.winnerFound = true;
+        }
+    }
+
+    private void SetAllProvinces(List<Province> provinces)
+    {
+        var tiles = GameTiles.instance.tiles;
+        WorldTile _tile;
+        foreach (var province in provinces)
+        {
+            foreach(var territory in province.teritories)
+            {
+                tiles.TryGetValue(territory, out _tile);
+                _tile.Province = province;
+            }
+        }
+    }
+
+    private void CreateArmyToTotorialEnemy(Player player, Vector3Int tilePosition, GameObject newArmyCoin, string type)
+    {
+        var tiles = GameTiles.instance.tiles;
+        WorldTile _tile;
+        if (tiles.TryGetValue(tilePosition, out _tile))
+        {
+            var position = _tile.WorldLocation;
+            var army = ArmyFactory.GetArmyTemplate(type);
+            if (newArmyCoin != null)
+            {
+
+                ArmyFactory.InstantiateArmy(newArmyCoin, position);
+                army.positionInGrid = _tile.LocalPlace;
+                army.player = player;
+                player.armies.Add(army);
+                _tile.army = army;
+            }
         }
     }
 

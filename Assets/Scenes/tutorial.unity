@@ -72694,6 +72694,9 @@ MonoBehaviour:
   supplyText: {fileID: 1211421697}
   incomeText: {fileID: 1925818350}
   playerIdText: {fileID: 1562234526}
+  lossPanel: {fileID: 0}
+  winPanel: {fileID: 0}
+  armyForTutorialEnemy: {fileID: 2003847808}
   tutorial: 1
 --- !u!114 &225264444
 MonoBehaviour:
@@ -75509,6 +75512,9 @@ MonoBehaviour:
   supplyText: {fileID: 0}
   incomeText: {fileID: 0}
   playerIdText: {fileID: 0}
+  lossPanel: {fileID: 0}
+  winPanel: {fileID: 0}
+  armyForTutorialEnemy: {fileID: 0}
   tutorial: 0
 --- !u!114 &1211421697
 MonoBehaviour:

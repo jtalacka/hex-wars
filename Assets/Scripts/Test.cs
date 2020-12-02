@@ -179,7 +179,7 @@ public class Test : MonoBehaviour
                     go.GetComponent<TMP_Text>().text = "Create another army of the same type,place it and try to move it on top of your previously created army to join them. Their quantity will add up";
                     Tutorial.tutorialCount++;
                 }
-
+                GameObject.Find("MovementAudio").GetComponent<AudioSource>().Stop();
                 moving = false;
                 objectPressed = false;
                 objectPressed = false;
@@ -190,6 +190,7 @@ public class Test : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+
            // print("testMOve");
             var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
             Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -204,6 +205,7 @@ public class Test : MonoBehaviour
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
                     tempTile=tile[0];
                     tile.RemoveAt(0);
+                    GameObject.Find("MovementAudio").GetComponent<AudioSource>().Play();
                 }
             }
 
@@ -213,6 +215,7 @@ public class Test : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)&&army.player.id==Players.currentPlayer.id)
         {
+            GameObject.Find("MovementAudio").GetComponent<AudioSource>().clip = army.audio;
             if (Tutorial.tutorial&&Tutorial.tutorialCount==3)
             {
                 GameObject go = GameObject.Find("Tutorial-text").gameObject;

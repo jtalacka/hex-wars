@@ -9,7 +9,7 @@ public class Battle : MonoBehaviour
     public Army attacker;
     public Army defender;
     public float speed;
-    public float time = 20f;
+    public float time = 5f;
     private float timeRemaining;
     private GameObject panel;
     private Text attacker_player;
@@ -47,6 +47,7 @@ public class Battle : MonoBehaviour
         timeleft.text = timeRemaining.ToString();
         audio.loop=true;
         audio.Play();
+        GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = false;
 
     }
 
@@ -60,6 +61,7 @@ public class Battle : MonoBehaviour
             Destroy(attacker);
             panel.SetActive(false);
             audio.Stop();
+            GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = true;
             Destroy(this.GetComponent("Battle"));
             Destroy(this.gameObject);
 
@@ -75,6 +77,7 @@ public class Battle : MonoBehaviour
                 }
             }
             audio.Stop();
+            GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = true;
             Destroy(this.GetComponent("Battle"));
             defender.player.armies.Remove(defender);
             Destroy(defender);
@@ -83,10 +86,10 @@ public class Battle : MonoBehaviour
         }
 
         //print(retreatTile);
-        if (retreat != null&&retreatTile!=null)
+        if (retreat != null && retreatTile != null)
 
         {
-            Transform trans=null;
+            Transform trans = null;
             foreach (var go in GameObject.FindGameObjectsWithTag("army") as GameObject[])
             {
                 if (go.GetComponent<Test>().army == retreat)
@@ -113,9 +116,33 @@ public class Battle : MonoBehaviour
                 retreatTile.army = retreat;
                 panel.SetActive(false);
                 audio.Stop();
+                GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = true;
                 Destroy(this.GetComponent("Battle"));
             }
 
+        }
+        else if(retreat!=null)
+        {
+            print("helpo");
+            if (retreat == attacker)
+                {
+                CancelInvoke();
+                Destroy(this.GetComponent("Battle"));
+                    Destroy(this.gameObject);
+
+                }
+                else if(retreat==defender)
+                {
+                CancelInvoke();
+                foreach (var go in GameObject.FindGameObjectsWithTag("army") as GameObject[])
+                {
+                    if (go.GetComponent<Test>().army == defender)
+                    {
+                        Destroy(go.gameObject);
+                    }
+                }
+                Destroy(this.GetComponent("Battle"));
+                }
         }
 
     }
@@ -128,6 +155,7 @@ public class Battle : MonoBehaviour
                 timeRemaining--;
                 int ad = damageCalculator(attacker.quantity);
                 int dd = damageCalculator(defender.quantity);
+                print(ad + " " + dd);
                 defender.quantity -= ad;
                 attacker.quantity -= dd;
                 attacker_quantity.text = attacker.quantity.ToString();
@@ -136,27 +164,33 @@ public class Battle : MonoBehaviour
 
                 if (attacker.quantity < defender.quantity / 2)
                 {
-                    retreat = attacker;
-                    enemyNearby(retreat.positionInGrid);
+                //    retreat = attacker;
+                //    enemyNearby(retreat.positionInGrid);
                 }
                 else if (attacker.quantity/2 > defender.quantity)
                 {
-                    retreat = defender;
-                    enemyNearby(retreat.positionInGrid);
+                 //   retreat = defender;
+                 //   enemyNearby(retreat.positionInGrid);
 
                 }
             }
             else
             {
-                panel.SetActive(false);
-                audio.Stop();
-                Destroy(this.GetComponent("Battle"));
+                if (attacker.quantity <= defender.quantity)
+                {
+                    retreat = attacker;
+                }
+                else if (attacker.quantity > defender.quantity)
+                {
+                    retreat = defender;
+                }
+                enemyNearby(retreat.positionInGrid);
             }
         }
     }
     private int damageCalculator(int quantity)
     {
-        return Random.Range(0,(int)(quantity/4+0.75));
+        return Random.Range(0,(int)(quantity/3+1.75));
 
     }
 

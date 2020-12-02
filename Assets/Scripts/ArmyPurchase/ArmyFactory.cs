@@ -40,7 +40,7 @@ public class ArmyFactory : MonoBehaviour
                 army.movementLeft = 40;
                 army.price = 1;
                 army.supply = 1;
-                army.audio = Resources.Load("/sounds/InfantryAudio.wav") as AudioClip;
+                army.audio = Resources.Load("InfantryAudio") as AudioClip;
                 break;
         }
         army.Type = type;

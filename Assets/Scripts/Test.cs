@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class Test : MonoBehaviour
 {
@@ -177,6 +178,7 @@ public class Test : MonoBehaviour
                                         go.GetComponent<TMP_Text>().text = "Move your army near the enemy player to attack him. If you're out of movement or want to get more Money from your provinces press, End Turn";
                                         Tutorial.tutorialCount++;
                                     }
+                                    GameObject.Find("MovementAudio").GetComponent<AudioSource>().Stop();
                                     Destroy(this.gameObject);
                                 }
 
@@ -193,6 +195,7 @@ public class Test : MonoBehaviour
                     Tutorial.tutorialCount++;
                 }
                 GameObject.Find("MovementAudio").GetComponent<AudioSource>().Stop();
+                GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = true;
                 moving = false;
                 objectPressed = false;
                 objectPressed = false;
@@ -214,6 +217,7 @@ public class Test : MonoBehaviour
                     int index = tile.FindIndex(t => t == _tile);
                     resetColorFromSelected(index + 1, tile.Count - 1);
                     moving = true;
+                    GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = false;
                     Color color;
                     if((tile[0].Province != null) && (tile[0].Province.player.id != null))
                     {
@@ -226,6 +230,7 @@ public class Test : MonoBehaviour
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, color);
                     tempTile=tile[0];
                     tile.RemoveAt(0);
+                    GameObject.Find("MovementAudio").GetComponent<AudioSource>().Play();
                 }
             }
 

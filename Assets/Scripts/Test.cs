@@ -144,6 +144,7 @@ public class Test : MonoBehaviour
             }
             else
             {
+                print("move test");
                 var tiles = GameTiles.instance.tiles;
                 Players.currentPlayer.armies.ForEach(armies =>
                     {

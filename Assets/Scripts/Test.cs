@@ -17,7 +17,7 @@ public class Test : MonoBehaviour
     private Vector3 lastMouseCoordinate = Vector3.zero;
     private WorldTile tempTile;
     private Army enemyArmy;
-    private bool merge=false;
+    private bool merge = false;
     public AudioSource battleSound;
     // Update is called once per frame
     List<Tilemap> tilemap;
@@ -28,14 +28,11 @@ public class Test : MonoBehaviour
         var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
         tilemap.Add(map);
         this.gameObject.GetComponent<SpriteRenderer>().color = Players.currentPlayer.color;
-        if (Tutorial.tutorial&&army.player==null)
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().color = Players.players[1].color;
-        }
-
+        print("BBB");
 
         if (tiles.TryGetValue(locationInGrid(transform.position), out _tile))
         {
+
             army = _tile.army;
             army.positionInGrid = _tile.LocalPlace;
         }
@@ -56,7 +53,7 @@ public class Test : MonoBehaviour
             if (objectPressed)
             {
                 Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-               // print(locationInGrid(point));
+                // print(locationInGrid(point));
                 var current = tilemap[0].WorldToCell(point);
                 if (current != lastMouseCoordinate)
                 {
@@ -116,14 +113,14 @@ public class Test : MonoBehaviour
             float step = speed * Time.deltaTime;
             if (tile.Count > 0)
             {
-                    if (Vector2.Distance(transform.position, tile[0].WorldLocation) >= 0.001f)
+                if (Vector2.Distance(transform.position, tile[0].WorldLocation) >= 0.001f)
                 {
-                  //  print(transform.position + "----------"+tile[0].WorldLocation);
+                    //  print(transform.position + "----------"+tile[0].WorldLocation);
                     var temVector = tile[0].WorldLocation;
                     transform.position = Vector2.MoveTowards(transform.position, temVector, step);
                     // print(tile[0].army);
-                        tile[0].army = this.army;
-                    
+                    tile[0].army = this.army;
+
                     army.positionInGrid = tile[0].LocalPlace;
 
                 }
@@ -143,7 +140,7 @@ public class Test : MonoBehaviour
                     tempTile = tile[0];
                     tile.RemoveAt(0);
                     army.movementLeft -= 1;
-                    if (tile.Count == 0&&enemy)
+                    if (tile.Count == 0 && enemy)
                     {
                         print("there's an enemy");
                         this.gameObject.AddComponent<Battle>();
@@ -210,7 +207,7 @@ public class Test : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-           // print("testMOve");
+            // print("testMOve");
             var tiles = GameTiles.instance.tiles; // This is our Dictionary of tiles
             Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var worldPoint = tilemap[0].WorldToCell(point);
@@ -223,7 +220,7 @@ public class Test : MonoBehaviour
                     moving = true;
                     GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = false;
                     Color color;
-                    if((tile[0].Province != null) && (tile[0].Province.player.id != null))
+                    if ((tile[0].Province != null) && (tile[0].Province.player.id != null))
                     {
                         color = tile[0].Province.player.color;
                     }
@@ -232,7 +229,7 @@ public class Test : MonoBehaviour
                         color = new Color(1, 1, 1, 1);
                     }
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, color);
-                    tempTile=tile[0];
+                    tempTile = tile[0];
                     tile.RemoveAt(0);
                     GameObject.Find("MovementAudio").GetComponent<AudioSource>().Play();
                 }
@@ -242,10 +239,10 @@ public class Test : MonoBehaviour
     }
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0)&&army.player.id==Players.currentPlayer.id)
+        if (Input.GetMouseButtonDown(0) && army.player.id == Players.currentPlayer.id)
         {
             GameObject.Find("MovementAudio").GetComponent<AudioSource>().clip = army.audio;
-            if (Tutorial.tutorial&&Tutorial.tutorialCount==3)
+            if (Tutorial.tutorial && Tutorial.tutorialCount == 3)
             {
                 GameObject go = GameObject.Find("Tutorial-text").gameObject;
                 go.GetComponent<TMP_Text>().text = "Drag your mouse to create a path for your army to move and click left mouse button.\n On the bottom left you can see information about your current army";
@@ -255,7 +252,7 @@ public class Test : MonoBehaviour
             bool otherArmyPressed = false;
             foreach (var go in GameObject.FindGameObjectsWithTag("army") as GameObject[])
             {
-                if (go.GetComponent<Test>().objectPressed==true)
+                if (go.GetComponent<Test>().objectPressed == true)
                 {
                     otherArmyPressed = true;
                     break;
@@ -318,9 +315,9 @@ public class Test : MonoBehaviour
                 WorldTile centerSurroundingWorldTile = null;
                 foreach (var centerSurroundingTile in centerSurroundingTiles)
                 {
-                    if (tiles.TryGetValue(locationInGrid(centerSurroundingTile), out centerSurroundingWorldTile) && 
-                        (centerSurroundingWorldTile.army != null ) && (centerSurroundingWorldTile.army.player.id != Players.currentPlayer.id))
-                           
+                    if (tiles.TryGetValue(locationInGrid(centerSurroundingTile), out centerSurroundingWorldTile) &&
+                        (centerSurroundingWorldTile.army != null) && (centerSurroundingWorldTile.army.player.id != Players.currentPlayer.id))
+
                     {
                         enemyFound = true;
                         break;
@@ -328,7 +325,7 @@ public class Test : MonoBehaviour
                 }
                 if (!enemyFound)
                 {
-                    foreach(var player in Players.players)
+                    foreach (var player in Players.players)
                     {
                         if (player.provinces.Contains(surroundingTile.Province))
                         {
@@ -350,14 +347,14 @@ public class Test : MonoBehaviour
             }
         }
     }
-    private void resetColorFromSelected(int begining,int end)
+    private void resetColorFromSelected(int begining, int end)
     {
 
         for (int i = end; i >= begining; i--)
         {
             Color color;
             var province = tile[i].Province;
-            if((province != null) && (province.player.id != null))
+            if ((province != null) && (province.player.id != null))
             {
                 color = province.player.color;
             }
@@ -373,6 +370,10 @@ public class Test : MonoBehaviour
     private Vector3Int locationInGrid(Vector3 position)
     {
         return tilemap[0].WorldToCell(position);
+    }
+    public void tutorialEnemyColor()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
     }
 
 

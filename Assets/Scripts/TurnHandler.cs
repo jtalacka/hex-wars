@@ -251,6 +251,17 @@ public class TurnHandler : MonoBehaviour
                 army.quantity = 10;
                 player.armies.Add(army);
                 _tile.army = army;
+
+                foreach (var arm in GameObject.FindGameObjectsWithTag("army") as GameObject[])
+                {
+                    if (arm.GetComponent<Test>().army == army)
+                    {
+                        print("AAAA");
+                        arm.GetComponent<Test>().tutorialEnemyColor();
+                        break;
+                    }
+                }
+
             }
         }
     }

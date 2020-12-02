@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class Test : MonoBehaviour
 {
@@ -184,6 +185,7 @@ public class Test : MonoBehaviour
                     Tutorial.tutorialCount++;
                 }
                 GameObject.Find("MovementAudio").GetComponent<AudioSource>().Stop();
+                GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = true;
                 moving = false;
                 objectPressed = false;
                 objectPressed = false;
@@ -205,6 +207,7 @@ public class Test : MonoBehaviour
                     int index = tile.FindIndex(t => t == _tile);
                     resetColorFromSelected(index + 1, tile.Count - 1);
                     moving = true;
+                    GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = false;
                     tile[0].TilemapMember.SetColor(tile[0].LocalPlace, new Color(1, 1, 1, 1));
                     tempTile=tile[0];
                     tile.RemoveAt(0);

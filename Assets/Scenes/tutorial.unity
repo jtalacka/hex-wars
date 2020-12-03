@@ -72755,7 +72755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.999756, y: -8.5000305}
+  m_AnchoredPosition: {x: -6.999756, y: -8.5}
   m_SizeDelta: {x: -332.46802, y: -146.17622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &196684274
@@ -73883,7 +73883,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870409013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.39, y: 3.61, z: 0}
+  m_LocalPosition: {x: -5.63, y: -1.18, z: 0}
   m_LocalScale: {x: 0.6941927, y: 0.61347264, z: 0.61347264}
   m_Children: []
   m_Father: {fileID: 0}
@@ -74617,7 +74617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 156.04999, y: -0.00015258789}
+  m_AnchoredPosition: {x: 156.05005, y: -0.00012207031}
   m_SizeDelta: {x: -312.09424, y: 0.00030517578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028721279
@@ -75638,7 +75638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143037558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.83, y: 5.42, z: 0}
+  m_LocalPosition: {x: -0.37, y: 9, z: 0}
   m_LocalScale: {x: 0.6941927, y: 0.61347264, z: 0.61347264}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77112,7 +77112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 34.099976, y: -219}
+  m_AnchoredPosition: {x: 34.099854, y: -219}
   m_SizeDelta: {x: -594.6333, y: -445.4594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1718864044
@@ -78137,7 +78137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -99.60803, y: -279.5}
+  m_AnchoredPosition: {x: -99.608154, y: -279.5}
   m_SizeDelta: {x: -199.21667, y: -510.4793}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2130919430

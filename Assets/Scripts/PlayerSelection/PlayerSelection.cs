@@ -19,10 +19,10 @@ public class PlayerSelection : MonoBehaviour
         playerCount = 2;
         startingMoney = 1000;
         provinces = new List<string>();
-        provinces.Add("Bordo");
-        provinces.Add("Marseille");
-        provinces.Add("province3");
-        provinces.Add("province4");
+        provinces.Add("Madrid");
+        provinces.Add("Paris");
+        provinces.Add("Brussels");
+        provinces.Add("Amsterdam");
         colors = new List<Color>();
         colors.Add(Color.red);
         colors.Add(Color.blue);

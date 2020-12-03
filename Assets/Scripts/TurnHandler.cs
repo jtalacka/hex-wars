@@ -10,6 +10,7 @@ public class TurnHandler : MonoBehaviour
     public Text supplyText;
     public Text incomeText;
     public Text playerIdText;
+    public Text currentPlayer;
     public GameObject lossPanel;
     public GameObject winPanel;
     public GameObject armyForTutorialEnemy;
@@ -129,6 +130,10 @@ public class TurnHandler : MonoBehaviour
     private void ShowPlayerInfo()
     {
         Debug.Log("CP:" + Players.currentPlayer.id);
+        if (!Tutorial.tutorial)
+        {
+           currentPlayer.text = "Current Player: " + Players.currentPlayer.name;
+        }
         moneyText.text = "Money: " + Players.currentPlayer.money;
         supplyText.text = "Supply: " + Players.currentPlayer.supply + "/turn";
         incomeText.text = "Income: " + income + "/turn";
@@ -141,15 +146,30 @@ public class TurnHandler : MonoBehaviour
         Player player;
         for (int i = 0; i < count; i++)
         {
-            player = new Player()
+            if (!Tutorial.tutorial)
             {
-                id = i,
-                supply = 0,
-                money = startingMoney,
-                province_nr = 1
-            };
+                player = new Player()
+                {
+                    id = i,
+                    supply = 0,
+                    money = startingMoney,
+                    province_nr = 1,
+                    name = PlayerSelection.players[i].name
+                };
+            }
+            else
+            {
+                player = new Player()
+                {
+                    id = i,
+                    supply = 0,
+                    money = startingMoney,
+                    province_nr = 1
+                };
+            }
             players.Add(player);
         }
+        
         return players;
     }
 
@@ -229,6 +249,8 @@ public class TurnHandler : MonoBehaviour
 
         if (Players.winnerFound)
         {
+            Players.winnerFound = false;
+            Players.losserId = -1;
             this.gameObject.GetComponent<SwitchScene>().switchScene();
             // change scene into menu
         }

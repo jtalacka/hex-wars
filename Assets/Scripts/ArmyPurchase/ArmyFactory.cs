@@ -11,16 +11,16 @@ public class ArmyFactory : MonoBehaviour
         { 
             case "Tank":
                 army = ScriptableObject.CreateInstance<Army>();
-                army.movement = 7;
-                army.movementLeft = 7;
+                army.movement = 12;
+                army.movementLeft = 12;
                 army.price = 30;
                 army.supply = 5;
                 army.audio= Resources.Load("TankAudio") as AudioClip;
                 break;
             case "Plane":
                 army = ScriptableObject.CreateInstance<Army>();
-                army.movement = 12;
-                army.movementLeft = 12;
+                army.movement = 15;
+                army.movementLeft = 15;
                 army.price = 40;
                 army.supply = 7;
                 army.audio = Resources.Load("PlaneAudio") as AudioClip;
@@ -36,8 +36,8 @@ public class ArmyFactory : MonoBehaviour
             case "Infantry":
             default:
                 army = ScriptableObject.CreateInstance<Army>();
-                army.movement = 40;
-                army.movementLeft = 40;
+                army.movement = 9;
+                army.movementLeft = 9;
                 army.price = 1;
                 army.supply = 1;
                 army.audio = Resources.Load("InfantryAudio") as AudioClip;

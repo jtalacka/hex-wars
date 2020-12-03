@@ -16,6 +16,8 @@ public class PlayerSelection : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        Players.winnerFound = false;
+        Players.losserId = -1;
         playerCount = 2;
         startingMoney = 1000;
         provinces = new List<string>();

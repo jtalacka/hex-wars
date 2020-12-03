@@ -10,7 +10,7 @@ public class Battle : MonoBehaviour
     public Army attacker;
     public Army defender;
     public float speed;
-    public float time = 5f;
+    public float time = 10f;
     private float timeRemaining;
     private GameObject panel;
     private Text attacker_player;
@@ -40,7 +40,11 @@ public class Battle : MonoBehaviour
         defender_quantity = panel.transform.Find("Defender_Quantity").GetComponent<Text>();
         timeleft = panel.transform.Find("TimeLeft").GetComponent<Text>();
 
-
+        if (!Tutorial.tutorial)
+        {
+            attacker_player.text = attacker.player.name;
+            defender_player.text = defender.player.name;
+        }
         attacker_type.text = attacker.Type;
         defender_type.text = defender.Type;
         attacker_quantity.text = attacker.quantity.ToString();

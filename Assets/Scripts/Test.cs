@@ -180,6 +180,7 @@ public class Test : MonoBehaviour
                                         Tutorial.tutorialCount++;
                                     }
                                     GameObject.Find("MovementAudio").GetComponent<AudioSource>().Stop();
+                                    GameObject.Find("EndTurnBtn").GetComponent<Button>().interactable = true;
                                     Destroy(this.gameObject);
                                 }
 

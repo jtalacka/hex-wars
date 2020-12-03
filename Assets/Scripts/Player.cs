@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public List<Province> provinces = new List<Province>();
     public Color color;
     public int supply;
+    public string name;
     public int money;
     public int province_nr;
 }

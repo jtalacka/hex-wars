@@ -36,8 +36,8 @@ public class ArmyFactory : MonoBehaviour
             case "Infantry":
             default:
                 army = ScriptableObject.CreateInstance<Army>();
-                army.movement = 40;
-                army.movementLeft = 40;
+                army.movement = 9;
+                army.movementLeft = 9;
                 army.price = 1;
                 army.supply = 1;
                 army.audio = Resources.Load("InfantryAudio") as AudioClip;

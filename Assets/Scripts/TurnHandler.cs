@@ -232,6 +232,24 @@ public class TurnHandler : MonoBehaviour
                 _tile.Province = province;
             }
         }
+        Player player = new Player();
+        player.color = new Color(1, 1, 1, 1);
+
+        if (!Tutorial.tutorial)
+        {
+            for (int i = 3; i <= 38; i++)
+            {
+                GameObject provinceObject = GameObject.Find("center" + i);
+                var apph1 = provinceObject.GetComponent<ArmyPurchasePanelHandler>();
+                Province province = apph1.province;
+                province.player = player;
+                foreach (var territory in province.teritories)
+                {
+                    tiles.TryGetValue(territory, out _tile);
+                    _tile.Province = province;
+                }
+            }
+        }
     }
 
     private void CreateArmyToTotorialEnemy(Player player, Vector3Int tilePosition, GameObject newArmyCoin, string type)

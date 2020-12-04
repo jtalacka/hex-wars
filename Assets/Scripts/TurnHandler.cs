@@ -35,17 +35,6 @@ public class TurnHandler : MonoBehaviour
         AssignProvince();
         Players.players[0].color = Color.red;
         Players.players[1].color = new Color(1, 0.69f, 0, 1);
-        if (!Tutorial.tutorial)
-        {
-            if (PlayerSelection.players.Count == 3)
-            {
-                Players.players[2].color = Color.blue;
-            }
-            else if (PlayerSelection.players.Count == 4)
-            {
-                Players.players[3].color = Color.grey;
-            }
-        }
         Players.currentPlayer = Players.players[0];
         Debug.Log("Start Player id: " + Players.currentPlayer.id);
         ColorProvinces.ColorAllProvinces();
@@ -132,7 +121,7 @@ public class TurnHandler : MonoBehaviour
         Debug.Log("CP:" + Players.currentPlayer.id);
         if (!Tutorial.tutorial)
         {
-           currentPlayer.text = "Current Player: " + Players.currentPlayer.name;
+            currentPlayer.text = "Current Player: " + Players.currentPlayer.name;
         }
         moneyText.text = "Money: " + Players.currentPlayer.money;
         supplyText.text = "Supply: " + Players.currentPlayer.supply + "/turn";
@@ -169,19 +158,16 @@ public class TurnHandler : MonoBehaviour
             }
             players.Add(player);
         }
-        
         return players;
     }
 
     private void AssignProvince()
     {
-
         GameObject provinceObject = GameObject.Find("center-Recovered");
         var apph = provinceObject.GetComponent<ArmyPurchasePanelHandler>();
         Province province = apph.province;
         Players.players[0].provinces.Add(province);
         province.player = Players.players[0];
-
 
         GameObject provinceObject1 = GameObject.Find("center2");
         var apph1 = provinceObject1.GetComponent<ArmyPurchasePanelHandler>();
@@ -191,30 +177,7 @@ public class TurnHandler : MonoBehaviour
         List<Province> provinces = new List<Province>();
         provinces.Add(province);
         provinces.Add(province1);
-
         SetAllProvinces(provinces);
-
-        if (!Tutorial.tutorial)
-        {
-            if (PlayerSelection.players.Count == 3)
-            {
-                GameObject provinceObject2 = GameObject.Find("center3");
-                var apph2 = provinceObject2.GetComponent<ArmyPurchasePanelHandler>();
-                Province province2 = apph2.province;
-                Players.players[2].provinces.Add(province2);
-                province2.player = Players.players[2];
-                provinces.Add(province2);
-            }
-            else if (PlayerSelection.players.Count == 4)
-            {
-                GameObject provinceObject3 = GameObject.Find("center4");
-                var apph3 = provinceObject3.GetComponent<ArmyPurchasePanelHandler>();
-                Province province3 = apph3.province;
-                Players.players[3].provinces.Add(province3);
-                province3.player = Players.players[3];
-                provinces.Add(province3);
-            }
-        }
     }
 
     private void CheckForLoss()
@@ -249,8 +212,6 @@ public class TurnHandler : MonoBehaviour
 
         if (Players.winnerFound)
         {
-            Players.winnerFound = false;
-            Players.losserId = -1;
             this.gameObject.GetComponent<SwitchScene>().switchScene();
             // change scene into menu
         }
@@ -288,24 +249,6 @@ public class TurnHandler : MonoBehaviour
             {
                 tiles.TryGetValue(territory, out _tile);
                 _tile.Province = province;
-            }
-        }
-        if (!Tutorial.tutorial)
-        {
-            Player player = new Player();
-            player.color = new Color(1, 1, 1, 1);
-
-            for (int i = 3; i <= 4; i++)
-            {
-                GameObject provinceObject = GameObject.Find("center" + i);
-                var apph1 = provinceObject.GetComponent<ArmyPurchasePanelHandler>();
-                Province province = apph1.province;
-                province.player = player;
-                foreach (var territory in province.teritories)
-                {
-                    tiles.TryGetValue(territory, out _tile);
-                    _tile.Province = province;
-                }
             }
         }
     }
